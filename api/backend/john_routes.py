@@ -60,3 +60,27 @@ def add_user_skill(id):
     response = make_response("Skill added to user's profile successfully")
     response.status_code = 201
     return response
+
+# Route to delete a skill from a user's profile
+@john.route('/user/<id>/skills', methods=['DELETE'])
+def delete_user_skill(id):
+    skill_data = request.json
+    skill_id = skill_data['skill_id']
+
+    query = f'''
+        DELETE FROM student_skills
+        WHERE student_id = {id} AND skill_id = {skill_id}
+    '''
+    current_app.logger.info(f'Query: {query}')
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    db.get_db().commit()
+
+    response = make_response("Skill removed from user's profile successfully")
+    response.status_code = 200
+    return response
+
+# Route to update an existing review
+@john.route('/reviews/<id>', methods=['PUT'])
+def update_review(id):
+    return None ## stub to do
