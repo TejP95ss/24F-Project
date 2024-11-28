@@ -187,3 +187,38 @@ VALUES (29, 'Insurance', 'Light', 28.18, 'Underwriting Intern', 4.4, 'Assist in 
 
 INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
 VALUES (30, 'Technology', 'Average', 27.0, 'Systems Administrator Intern', 3.2, 'Monitor and maintain system performance for corporate IT infrastructure.');
+
+INSERT INTO admin (name, role, email) VALUES ('Margette Holdron', 'System Administrator', 'mholdron0@google.com.br');
+INSERT INTO admin (name, role, email) VALUES ('Lucina Girling', 'IT Administrator', 'lgirling1@cnet.com');
+INSERT INTO admin (name, role, email) VALUES ('Corbett Lafee', 'Network Administrator', 'clafee2@elpais.com');
+INSERT INTO admin (name, role, email) VALUES ('Willis Morby', 'Database Administrator', 'wmorby3@telegraph.co.uk');
+INSERT INTO admin (name, role, email) VALUES ('Tadio Farady', 'Cloud Administrator', 'tfarady4@arizona.edu');
+INSERT INTO admin (name, role, email) VALUES ('Onfroi Burchmore', 'System Administrator', 'oburchmore5@latimes.com');
+INSERT INTO admin (name, role, email) VALUES ('Devonne Goodison', 'Security Administrator', 'dgoodison6@amazon.com');
+INSERT INTO admin (name, role, email) VALUES ('Lief Iacovolo', 'Systems Administrator II', 'liacovolo7@qq.com');
+INSERT INTO admin (name, role, email) VALUES ('Lisbeth Aujouanet', 'User Support Administrator', 'laujouanet8@mediafire.com');
+INSERT INTO admin (name, role, email) VALUES ('Corbett Kinchley', 'Backup Administrator', 'ckinchley9@mit.edu');
+INSERT INTO admin (name, role, email) VALUES ('Greg Brosini', 'Storage Administrator', 'gbrosinia@imdb.com');
+INSERT INTO admin (name, role, email) VALUES ('Merell Raddish', 'Application Administrator', 'mraddishb@ow.ly');
+INSERT INTO admin (name, role, email) VALUES ('Audy Jay', 'Infrastructure Administrator', 'ajayc@chicagotribune.com');
+INSERT INTO admin (name, role, email) VALUES ('Darbie Bomb', 'Compliance Administrator', 'dbombd@mail.ru');
+INSERT INTO admin (name, role, email) VALUES ('Jeremy Note', 'Help Desk Administrator', 'jnotee@unesco.org');
+INSERT INTO admin (name, role, email) VALUES ('Penrod Keohane', 'Network Security Administrator', 'pkeohanef@nasa.gov');
+INSERT INTO admin (name, role, email) VALUES ('Katalin Medhurst', 'Access Control Administrator', 'kmedhurstg@nature.com');
+INSERT INTO admin (name, role, email) VALUES ('Deana Follows', 'IT Support Administrator', 'dfollowsh@jiathis.com');
+INSERT INTO admin (name, role, email) VALUES ('Ezequiel O''Reilly', 'Web Administrator', 'eoreillyi@artisteer.com');
+INSERT INTO admin (name, role, email) VALUES ('Niven Bryenton', 'Desktop Support Administrator', 'nbryentonj@vimeo.com');
+INSERT INTO admin (name, role, email) VALUES ('Bryon Considine', 'Systems Administrator III', 'bconsidinek@usatoday.com');
+INSERT INTO admin (name, role, email) VALUES ('Elnora Ben', 'Virtualization Administrator', 'ebenl@cbc.ca');
+INSERT INTO admin (name, role, email) VALUES ('Welsh Reinhardt', 'Server Administrator', 'wreinhardtm@google.com');
+INSERT INTO admin (name, role, email) VALUES ('Dolorita Scotfurth', 'DevOps Administrator', 'dscotfurthn@tmall.com');
+INSERT INTO admin (name, role, email) VALUES ('Tania Traut', 'Systems Operations Administrator', 'ttrauto@unc.edu');
+INSERT INTO admin (name, role, email) VALUES ('Jesse Oakwell', 'Systems Monitoring Administrator', 'joakwellp@nymag.com');
+INSERT INTO admin (name, role, email) VALUES ('Teddie Oakes', 'Senior IT Administrator', 'toakesq@facebook.com');
+INSERT INTO admin (name, role, email) VALUES ('Mandel Esseby', 'Patch Management Administrator', 'messebyr@yolasite.com');
+INSERT INTO admin (name, role, email) VALUES ('Drusy O'' Faherty', 'Configuration Administrator', 'dos@sphinn.com');
+INSERT INTO admin (name, role, email) VALUES ('Britta Beaument', 'Backup and Recovery Administrator', 'bbeaumentt@typepad.com');
+INSERT INTO admin (name, role, email) VALUES ('Byram Doumerc', 'Endpoint Security Administrator', 'bdoumercu@vinaora.com');
+INSERT INTO admin (name, role, email) VALUES ('Chrisy Saurat', 'Printer Administrator', 'csauratv@tinyurl.com');
+INSERT INTO admin (name, role, email) VALUES ('Marian Gatehouse', 'System Compliance Administrator', 'mgatehousew@telegraph.co.uk');
+INSERT INTO admin (name, role, email) VALUES ('Sallyann Malamore', 'Software Administrator', 'smalamorex@mac.com');
