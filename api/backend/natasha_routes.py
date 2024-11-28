@@ -39,3 +39,18 @@ def add_user(id):
     response.status_code = 201
     return response
 
+@natasha.route('/review/position/<position_id>', methods=['GET'])
+def find_position_reviews(position_id):
+    query = f'''
+        SELECT r.review_id, p.position name, r.rating, r.review_text
+        FROM review r
+        JOIN position p ON r.position_id = p.id
+        WHERE r.position_id = {id}
+    '''
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    theData = cursor.fetchall()
+
+    response = make_response(jsonify(theData))
+    response.status_code = 200
+    return response
