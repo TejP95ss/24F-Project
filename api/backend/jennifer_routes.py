@@ -115,6 +115,3 @@ def get_position_student_counts():
     response = make_response(jsonify(theData))
     response.status_code = 200
     return response
-
-
-
