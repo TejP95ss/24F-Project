@@ -5,7 +5,7 @@ natasha = Blueprint('natasha', __name__)
 
 # Gets all reviews for a specific position id (Natasha's 1st story)
 @natasha.route('/review/position/<position_id>', methods=['GET'])
-def find_position_reviews(position_id):
+def find_position_reviews(id):
     query = f'''
         SELECT r.id, p.title, r.rating, r.review_text
         FROM review r
