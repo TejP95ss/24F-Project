@@ -1,40 +1,109 @@
 USE RMCDatabase;
 
-insert into student (username, profileType, major, home_college, linkedin) values ('rodriguez.a24', 'Past Co-Op', 'Electrical Engineering', 'COE', 'https://www.linkedin.com/in/rodriguez-a/');
-insert into student (username, profileType, major, home_college) values ('chen.m2025', 'Past Co-Op', 'Cybersecurity', 'Khoury');
-insert into student (username, profileType, major, home_college, linkedin) values ('thompson.emma', 'Past Co-Op', 'Chemistry', 'COS', 'https://www.linkedin.com/in/thompson-emma/');
-insert into student (username, profileType, major, home_college) values ('kim.s2024', 'Current Seeker', 'Biomedical Engineering', 'COE');
-insert into student (username, profileType, major, home_college) values ('martinez.d25', 'Current Seeker', 'Business', 'D''Amore-McKim');
-insert into student (username, profileType, major, home_college) values ('patel.r', 'Current Seeker', 'Data Science', 'Khoury');
-insert into student (username, profileType, major, home_college) values ('williams.o2026', 'Current Seeker', 'English', 'CAMD');
-insert into student (username, profileType, major, home_college, linkedin) values ('nguyen.liam', 'Past Co-Op', 'Biomedical Engineering', 'COE', 'https://www.linkedin.com/in/nguyen-liam/');
-insert into student (username, profileType, major, home_college, linkedin) values ('baker.z23', 'Past Co-Op', 'Business', 'D''Amore-McKim', 'https://www.linkedin.com/in/baker-z/');
-insert into student (username, profileType, major, home_college) values ('garcia.e', 'Current Seeker', 'Electrical Engineering', 'COE');
-insert into student (username, profileType, major, home_college, linkedin) values ('jones.isabella', 'Past Co-Op', 'Electrical Engineering', 'COE', 'https://www.linkedin.com/in/jones-isabella/');
-insert into student (username, profileType, major, home_college) values ('lee.n2025', 'Current Seeker', 'Electrical Engineering', 'COE');
-insert into student (username, profileType, major, home_college, linkedin) values ('wilson.a', 'Past Co-Op', 'Media Arts', 'CAMD', 'https://www.linkedin.com/in/wilson-a/');
-insert into student (username, profileType, major, home_college, linkedin) values ('brown.caleb', 'Past Co-Op', 'Neuroscience', 'COS', 'https://www.linkedin.com/in/brown-caleb/');
-insert into student (username, profileType, major, home_college, linkedin) values ('taylor.j24', 'Past Co-Op', 'Psychology', 'Bouve', 'https://www.linkedin.com/in/taylor-j/');
-insert into student (username, profileType, major, home_college, linkedin) values ('clark.m2023', 'Past Co-Op', 'Philosophy', 'COSSH', 'https://www.linkedin.com/in/clark-m/');
-insert into student (username, profileType, major, home_college, linkedin) values ('moore.ben', 'Past Co-Op', 'Media Arts', 'CAMD', 'https://www.linkedin.com/in/moore-ben/');
-insert into student (username, profileType, major, home_college, linkedin) values ('cooper.h', 'Past Co-Op', 'Biomedical Engineering', 'COE', 'https://www.linkedin.com/in/cooper-h/');
-insert into student (username, profileType, major, home_college) values ('white.d2026', 'Current Seeker', 'Business', 'D''Amore-McKim');
-insert into student (username, profileType, major, home_college, linkedin) values ('davis.lily', 'Past Co-Op', 'Data Science', 'Khoury', 'https://www.linkedin.com/in/davis-lily/');
-insert into student (username, profileType, major, home_college) values ('miller.j', 'Current Seeker', 'Data Science', 'Khoury');
-insert into student (username, profileType, major, home_college) values ('lopez.s2024', 'Current Seeker', 'Media Arts', 'CAMD');
-insert into student (username, profileType, major, home_college) values ('scott.alex', 'Current Seeker', 'Philosophy', 'COSSH');
-insert into student (username, profileType, major, home_college, linkedin) values ('hall.grace', 'Past Co-Op', 'Psychology', 'Bouve', 'https://www.linkedin.com/in/hall-grace/');
-insert into student (username, profileType, major, home_college) values ('green.l2025', 'Current Seeker', 'Neuroscience', 'COS');
-insert into student (username, profileType, major, home_college, linkedin) values ('king.emma', 'Past Co-Op', 'Journalism', 'CAMD', 'https://www.linkedin.com/in/king-emma/');
-insert into student (username, profileType, major, home_college, linkedin) values ('adams.ryan', 'Past Co-Op', 'Cybersecurity', 'Khoury', 'https://www.linkedin.com/in/adams-ryan/');
-insert into student (username, profileType, major, home_college, linkedin) values ('carter.o', 'Past Co-Op', 'Neuroscience', 'COS', 'https://www.linkedin.com/in/carter-o/');
-insert into student (username, profileType, major, home_college) values ('turner.e2026', 'Current Seeker', 'Chemical Engineering', 'COE');
-insert into student (username, profileType, major, home_college) values ('phillips.a', 'Current Seeker', 'Biomedical Engineering', 'COE');
-insert into student (username, profileType, major, home_college) values ('rivera.sebastian', 'Current Seeker', 'Public Health', 'Bouve');
-insert into student (username, profileType, major, home_college) values ('evans.m2025', 'Current Seeker', 'Nursing', 'Bouve');
-insert into student (username, profileType, major, home_college, linkedin) values ('edwards.chris', 'Past Co-Op', 'Chemistry', 'COS', 'https://www.linkedin.com/in/edwards-chris/');
-insert into student (username, profileType, major, home_college) values ('collins.n', 'Current Seeker', 'Media Arts', 'CAMD');
-insert into student (username, profileType, major, home_college, linkedin) values ('sanders.w', 'Past Co-Op', 'Business', 'D''Amore-McKim', 'https://www.linkedin.com/in/sanders-w/');
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('rodriguez.a24', 'Alejandro Rodriguez', 'Past Co-Op', 'Electrical Engineering', 'COE', 'www.linkedin.com/in/rodriguez-a/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('chen.m2025', 'Ming Chen', 'Past Co-Op', 'Cybersecurity', 'Khoury');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('thompson.emma', 'Emma Thompson', 'Past Co-Op', 'Chemistry', 'COS', 'www.linkedin.com/in/thompson-emma/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('kim.s2024', 'Sophia Kim', 'Current Seeker', 'Biomedical Engineering', 'COE');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('martinez.d25', 'Daniel Martinez', 'Current Seeker', 'Business', 'D''Amore-McKim');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('patel.r', 'Rohan Patel', 'Current Seeker', 'Data Science', 'Khoury');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('williams.o2026', 'Owen Williams', 'Current Seeker', 'English', 'CAMD');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('nguyen.liam', 'Liam Nguyen', 'Past Co-Op', 'Biomedical Engineering', 'COE', 'www.linkedin.com/in/nguyen-liam/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('baker.z23', 'Zachary Baker', 'Past Co-Op', 'Business', 'D''Amore-McKim', 'www.linkedin.com/in/baker-z/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('garcia.e', 'Elena Garcia', 'Current Seeker', 'Electrical Engineering', 'COE');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('jones.isabella', 'Isabella Jones', 'Past Co-Op', 'Electrical Engineering', 'COE', 'www.linkedin.com/in/jones-isabella/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('lee.n2025', 'Nathan Lee', 'Current Seeker', 'Electrical Engineering', 'COE');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('wilson.a', 'Ava Wilson', 'Past Co-Op', 'Media Arts', 'CAMD', 'www.linkedin.com/in/wilson-a/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('brown.caleb', 'Caleb Brown', 'Past Co-Op', 'Neuroscience', 'COS', 'www.linkedin.com/in/brown-caleb/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('taylor.j24', 'Julia Taylor', 'Past Co-Op', 'Psychology', 'Bouve', 'www.linkedin.com/in/taylor-j/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('clark.m2023', 'Michael Clark', 'Past Co-Op', 'Philosophy', 'COSSH', 'www.linkedin.com/in/clark-m/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('moore.ben', 'Benjamin Moore', 'Past Co-Op', 'Media Arts', 'CAMD', 'www.linkedin.com/in/moore-ben/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('cooper.h', 'Hannah Cooper', 'Past Co-Op', 'Biomedical Engineering', 'COE', 'www.linkedin.com/in/cooper-h/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('white.d2026', 'David White', 'Current Seeker', 'Business', 'D''Amore-McKim');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('davis.lily', 'Lily Davis', 'Past Co-Op', 'Data Science', 'Khoury', 'www.linkedin.com/in/davis-lily/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('miller.j', 'James Miller', 'Current Seeker', 'Data Science', 'Khoury');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('lopez.s2024', 'Sophia Lopez', 'Current Seeker', 'Media Arts', 'CAMD');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('scott.alex', 'Alexander Scott', 'Current Seeker', 'Philosophy', 'COSSH');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('hall.grace', 'Grace Hall', 'Past Co-Op', 'Psychology', 'Bouve', 'www.linkedin.com/in/hall-grace/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('green.l2025', 'Lucas Green', 'Current Seeker', 'Neuroscience', 'COS');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('king.emma', 'Emma King', 'Past Co-Op', 'Journalism', 'CAMD', 'www.linkedin.com/in/king-emma/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('adams.ryan', 'Ryan Adams', 'Past Co-Op', 'Cybersecurity', 'Khoury', 'www.linkedin.com/in/adams-ryan/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('carter.o', 'Olivia Carter', 'Past Co-Op', 'Neuroscience', 'COS', 'www.linkedin.com/in/carter-o/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('turner.e2026', 'Ethan Turner', 'Current Seeker', 'Chemical Engineering', 'COE');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('phillips.a', 'Andrew Phillips', 'Current Seeker', 'Biomedical Engineering', 'COE');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('rivera.sebastian', 'Sebastian Rivera', 'Current Seeker', 'Public Health', 'Bouve');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('evans.m2025', 'Mia Evans', 'Current Seeker', 'Nursing', 'Bouve');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('edwards.chris', 'Chris Edwards', 'Past Co-Op', 'Chemistry', 'COS', 'www.linkedin.com/in/edwards-chris/');
+
+INSERT INTO student (username, full_name, profileType, major, home_college) 
+VALUES ('collins.n', 'Noah Collins', 'Current Seeker', 'Media Arts', 'CAMD');
+
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+VALUES ('sanders.w', 'William Sanders', 'Past Co-Op', 'Business', 'D''Amore-McKim', 'www.linkedin.com/in/sanders-w/');
 
 INSERT INTO data_analyst (email, name, role) VALUES ('fchree0@gmail.com', 'Fredrick Chree', 'Data Analyst');
 INSERT INTO data_analyst (email, name, role) VALUES ('cbaldassi1@outlook.com', 'Chuck Baldassi', 'IT Support Specialist');
