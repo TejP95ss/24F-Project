@@ -13,7 +13,7 @@ CREATE TABLE student
     profileType varchar(25),
     major varchar(25),
     home_college varchar(40),
-    linkedin varchar(30)
+    linkedin varchar(40)
 );
 
 CREATE TABLE company
