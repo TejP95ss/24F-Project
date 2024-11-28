@@ -7,6 +7,7 @@ USE RMCDatabase;
 CREATE TABLE student
 (
     id          integer AUTO_INCREMENT PRIMARY KEY,
+    full_name varchar(30),
     openToConnect bool DEFAULT true,
     username    varchar(25) UNIQUE NOT NULL,
     profileType varchar(25),
