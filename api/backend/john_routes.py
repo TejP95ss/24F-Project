@@ -83,4 +83,21 @@ def delete_user_skill(id):
 # Route to update an existing review
 @john.route('/reviews/<id>', methods=['PUT'])
 def update_review(id):
-    return None ## stub to do
+    review_data = request.json
+    rating = review_data['rating']
+    comments = review_data['review_text']
+
+    query = f'''
+        UPDATE review
+        SET rating = {rating}, review_text = '{comments}'
+        WHERE id = {id}
+    '''
+
+    current_app.logger.info(f'Query: {query}')
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    db.get_db().commit()
+
+    response = make_response("Review successfully updated")
+    response.status_code = 200
+    return response
