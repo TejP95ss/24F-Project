@@ -72,3 +72,22 @@ def get_users():
     response = make_response(jsonify(theData))
     response.status_code = 200
     return response
+
+# Route to delete a review for a user
+@john.route('/review/<id>', methods=['DELETE'])
+def delete_review(id):
+    review_data = request.json
+    review_id = review_data['id']
+
+    query = f'''
+        DELETE FROM review
+        WHERE review_id = {id} 
+    '''
+    current_app.logger.info(f'Query: {query}')
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    db.get_db().commit()
+
+    response = make_response("Review removed from site successfully")
+    response.status_code = 200
+    return response
