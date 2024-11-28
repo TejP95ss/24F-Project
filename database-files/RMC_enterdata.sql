@@ -369,3 +369,143 @@ INSERT INTO logs (app_id, timestamp) VALUES (26, '2024-04-05 04:11:21');
 INSERT INTO logs (app_id, timestamp) VALUES (5, '2024-06-07 03:52:13');
 INSERT INTO logs (app_id, timestamp) VALUES (29, '2024-07-04 16:27:38');
 
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (7, 4, 'Quarterly Performance', 'Technology vs. Healthcare', '2024-01-15 09:30:00');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (12, 12, 'Annual Report', 'Finance vs. Education', '2024-02-20 14:05:22');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (3, 18, 'Monthly Insights', 'Biotech vs. Engineering', '2024-03-25 16:45:58');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (5, 7, 'Hiring Trends', 'Healthcare vs. Manufacturing', '2024-04-02 08:22:19');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (17, 3, 'Student Feedback Analysis', 'Retail vs. Information Technology', '2024-04-30 12:37:45');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (21, 5, 'Recruitment Analysis', 'Healthcare vs. Finance', '2024-05-05 10:17:56');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (6, 21, 'Salary Comparison', 'Software vs. Sales', '2024-05-12 11:28:34');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (18, 15, 'Job Market Trends', 'Media vs. Construction', '2024-06-01 15:10:29');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (9, 9, 'Internship Program Performance', 'Manufacturing vs. Retail', '2024-06-10 13:12:43');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (13, 13, 'Job Placement Rates', 'Finance vs. Biotech', '2024-07-01 17:45:01');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (2, 10, 'Technology Adoption', 'Healthcare vs. Education', '2024-07-07 14:11:53');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (25, 6, 'Employee Satisfaction', 'Retail vs. Marketing', '2024-08-03 09:05:21');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (7, 26, 'Year-End Review', 'Engineering vs. Media', '2024-08-15 13:48:30');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (11, 20, 'Monthly Recruitment Statistics', 'Education vs. Health', '2024-09-01 16:53:19');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (10, 25, 'Placement Trends', 'Manufacturing vs. Biotech', '2024-09-10 18:42:12');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (4, 30, 'Student Success Rate', 'Engineering vs. Technology', '2024-10-02 09:11:05');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (19, 8, 'Employee Turnover Analysis', 'Retail vs. Sales', '2024-10-10 11:26:30');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (20, 17, 'Annual Growth', 'Healthcare vs. Media', '2024-11-01 14:30:20');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (8, 1, 'Industry Trends', 'Software vs. Biotech', '2024-11-05 16:03:45');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (27, 11, 'Career Services Impact', 'Construction vs. Healthcare', '2024-12-01 10:05:11');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (14, 14, 'Data Analytics Overview', 'Information Technology vs. Sales', '2024-12-10 12:23:55');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (5, 22, 'Job Satisfaction Index', 'Retail vs. Hospitality', '2024-01-18 13:17:39');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (3, 16, 'Internship Quality Metrics', 'Education vs. Engineering', '2024-02-12 15:45:02');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (16, 27, 'Co-op Program Impact', 'Sales vs. Information Technology', '2024-03-03 08:56:27');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (10, 2, 'Student Demographics', 'Healthcare vs. Business', '2024-04-07 17:43:12');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (22, 19, 'Economic Impact of Co-op Programs', 'Retail vs. Engineering', '2024-05-20 12:22:49');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (30, 29, 'Placement by Major', 'Business vs. Engineering', '2024-06-15 16:10:18');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (29, 23, 'Industry Comparison Analysis', 'Sales vs. Marketing', '2024-07-12 14:39:00');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (13, 12, 'Annual Recruitment Review', 'Media vs. Marketing', '2024-08-21 09:22:33');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (24, 5, 'Technology Trends in Co-op Placements', 'Biotech vs. Healthcare', '2024-09-18 12:17:24');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (15, 24, 'Internship Program Effectiveness', 'Sales vs. Business', '2024-10-05 13:47:56');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (11, 28, 'Sector Growth Overview', 'Retail vs. Media', '2024-11-07 11:30:59');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (23, 3, 'Placement by Region', 'Biotech vs. Healthcare', '2024-12-15 14:12:03');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (25, 10, 'Co-op Program Trends', 'Technology vs. Engineering', '2024-02-08 15:03:34');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (8, 25, 'Employer Engagement Metrics', 'Sales vs. Marketing', '2024-03-22 16:40:11');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (6, 6, 'Analysis of Student Placement by Industry', 'Retail vs. Biotech', '2024-04-25 17:25:06');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (17, 18, 'Employer Satisfaction Overview', 'Information Technology vs. Engineering', '2024-05-10 18:38:50');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (28, 7, 'Internship Feedback Analysis', 'Healthcare vs. Media', '2024-06-13 10:51:12');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (18, 21, 'Student Satisfaction Analysis', 'Technology vs. Healthcare', '2024-01-12 13:34:21');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (12, 13, 'Market Analysis', 'Education vs. Finance', '2024-02-14 16:22:09');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (26, 17, 'Yearly Industry Comparison', 'Healthcare vs. Sales', '2024-03-10 14:33:45');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (5, 30, 'Internship Demand', 'Retail vs. Biotech', '2024-04-02 17:47:30');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (27, 8, 'Placement Trends', 'Software vs. Engineering', '2024-05-15 10:01:22');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (29, 26, 'Employee Engagement', 'Sales vs. Marketing', '2024-06-11 12:22:33');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (2, 4, 'Recruitment Analysis', 'Healthcare vs. Information Technology', '2024-07-09 15:18:44');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (30, 1, 'Annual Recruitment Review', 'Engineering vs. Manufacturing', '2024-08-19 10:56:12');
+
+INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
+VALUES (16, 29, 'Job Satisfaction Report', 'Retail vs. Biotech', '2024-09-22 13:09:51');
