@@ -30,7 +30,7 @@ CREATE TABLE coop_position
     industry varchar(25),
     workload varchar(25),
     hourly_wage decimal(4, 2),
-    title varchar(25),
+    title varchar(50),
     avg_rating decimal(2, 1),
     description varchar(5000),
     FOREIGN KEY (company_id) REFERENCES company(id)
@@ -84,8 +84,8 @@ CREATE TABLE admin
 (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     name varchar(25),
-    role varchar(25),
-    email varchar(25)
+    role varchar(40),
+    email varchar(35)
 );
 
 CREATE TABLE applications
@@ -94,7 +94,7 @@ CREATE TABLE applications
     admin_id integer,
     version varchar(25),
     description varchar(200),
-    name varchar(25),
+    name varchar(40),
     FOREIGN KEY (admin_id) REFERENCES admin(id)
 );
 
