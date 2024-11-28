@@ -3,6 +3,24 @@ from backend.db_connection import db
 
 natasha = Blueprint('natasha', __name__)
 
+# Gets all reviews for a specific position id (Natasha's 1st story)
+@natasha.route('/review/position/<position_id>', methods=['GET'])
+def find_position_reviews(position_id):
+    query = f'''
+        SELECT r.review_id, p.position name, r.rating, r.review_text
+        FROM review r
+        JOIN position p ON r.position_id = p.id
+        WHERE r.position_id = {id}
+    '''
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    theData = cursor.fetchall()
+
+    response = make_response(jsonify(theData))
+    response.status_code = 200
+    return response
+
+# Returns a specific co-op student (Natasha's 2nd story)
 @natasha.route('/user/<id>', methods=['GET'])
 def find_user(id):
     query = f'''
@@ -19,6 +37,7 @@ def find_user(id):
     response.status_code = 200
     return response
 
+# Adds a user profile and contact information (Natasha's 3rd story)
 @natasha.route('/user/<id>', methods=['POST'])
 def add_user(id):
     user_data = request.json
@@ -39,13 +58,12 @@ def add_user(id):
     response.status_code = 201
     return response
 
-@natasha.route('/review/position/<position_id>', methods=['GET'])
-def find_position_reviews(position_id):
+# Returns a list of co op students (Natasha's 2nd and 4th story)
+@natasha.route('/user', methods=['GET'])
+def get_users():
     query = f'''
-        SELECT r.review_id, p.position name, r.rating, r.review_text
-        FROM review r
-        JOIN position p ON r.position_id = p.id
-        WHERE r.position_id = {id}
+        SELECT username, openToConnect, linkedin, major
+        FROM student 
     '''
     cursor = db.get_db().cursor()
     cursor.execute(query)
