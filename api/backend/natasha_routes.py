@@ -5,12 +5,12 @@ natasha = Blueprint('natasha', __name__)
 
 # Gets all reviews for a specific position id (Natasha's 1st story)
 @natasha.route('/review/position/<position_id>', methods=['GET'])
-def find_position_reviews(id):
+def find_position_reviews(position_id):
     query = f'''
-        SELECT r.review_id, p.position name, r.rating, r.review_text
+        SELECT r.id, p.title, r.rating, r.review_text
         FROM review r
-        JOIN position p ON r.position_id = p.id
-        WHERE r.position_id = {id}
+        JOIN coop_position p ON r.position_id = p.id
+        WHERE r.position_id = {position_id}
     '''
     cursor = db.get_db().cursor()
     cursor.execute(query)
@@ -24,7 +24,7 @@ def find_position_reviews(id):
 @natasha.route('/user/<id>', methods=['GET'])
 def find_user(id):
     query = f'''
-        SELECT username, openToConnect, linkedin, r.review_text, r.rating
+        SELECT s.username, s.openToConnect, s.linkedin, r.review_text, r.rating
         FROM student s
         JOIN review r ON s.id = r.student_id
         WHERE s.id = {id}
@@ -38,20 +38,20 @@ def find_user(id):
     return response
 
 # Adds a user profile and contact information (Natasha's 3rd story)
-@natasha.route('/user/<id>', methods=['POST'])
-def add_user(id):
+@natasha.route('/user/', methods=['POST'])
+def add_user():
     user_data = request.json
     username = user_data['username']
     profileType = user_data['profileType']
     openToConnect = user_data['openToConnect']
 
     query = f'''
-        INSERT INTO user (username, profileType, openToConnect)
-        VALUES ({id}, {skill_id}, {openToConnect})
+        INSERT INTO student (username, profileType, openToConnect)
+        VALUES (%s, %s, %s)
     '''
     current_app.logger.info(f'Query: {query}')
     cursor = db.get_db().cursor()
-    cursor.execute(query)
+    cursor.execute(query, (username, profileType, openToConnect))
     db.get_db().commit()
 
     response = make_response("User added successfully!")
@@ -59,7 +59,7 @@ def add_user(id):
     return response
 
 # Returns a list of co op students (Natasha's 2nd and 4th story)
-@natasha.route('/user', methods=['GET'])
+@natasha.route('/user/', methods=['GET'])
 def get_users():
     query = f'''
         SELECT username, openToConnect, linkedin, major
@@ -74,14 +74,11 @@ def get_users():
     return response
 
 # Route to delete a review for a user
-@john.route('/review/<id>', methods=['DELETE'])
+@natasha.route('/review/<id>', methods=['DELETE'])
 def delete_review(id):
-    review_data = request.json
-    review_id = review_data['id']
-
     query = f'''
         DELETE FROM review
-        WHERE review_id = {id} 
+        WHERE id = {id} 
     '''
     current_app.logger.info(f'Query: {query}')
     cursor = db.get_db().cursor()
