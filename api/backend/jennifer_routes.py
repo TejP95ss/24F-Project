@@ -21,14 +21,16 @@ def summary_data(id):
     response.status_code = 200
     return response
 
-# Gets recommended skills and majors for a co op
-@natasha.route('/user/<id>', methods=['GET'])
-def find_user(id):
+# Gets recommended skills and majors for a given co-op
+@jennifer.route('/position/<position_id>', methods=['GET'])
+def coop_skills_info(id):
     query = f'''
-        SELECT username, openToConnect, linkedin, r.review_text, r.rating
-        FROM student s
-        JOIN review r ON s.id = r.student_id
-        WHERE s.id = {id}
+        SELECT cp.title, s.name AS skill_name, COUNT(*) AS skill_frequency, st.major
+        FROM coop_position cp
+        JOIN review r ON r.position_id = cp.id
+        JOIN review_skills rs ON r.id = rs.review_id
+        JOIN skill s ON rs.skill_id = s.id
+        WHERE cp.id = {id}
     '''
     cursor = db.get_db().cursor()
     cursor.execute(query)
