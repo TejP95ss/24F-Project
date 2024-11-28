@@ -18,3 +18,24 @@ def find_user(id):
     response = make_response(jsonify(theData))
     response.status_code = 200
     return response
+
+@natasha.route('/user/<id>', methods=['POST'])
+def add_user(id):
+    user_data = request.json
+    username = user_data['username']
+    profileType = user_data['profileType']
+    openToConnect = user_data['openToConnect']
+
+    query = f'''
+        INSERT INTO user (username, profileType, openToConnect)
+        VALUES ({id}, {skill_id}, {openToConnect})
+    '''
+    current_app.logger.info(f'Query: {query}')
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    db.get_db().commit()
+
+    response = make_response("User added successfully!")
+    response.status_code = 201
+    return response
+
