@@ -1,108 +1,108 @@
 USE RMCDatabase;
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('rodriguez.a24', 'Alejandro Rodriguez', 'Past Co-Op', 'Electrical Engineering', 'COE', 'www.linkedin.com/in/rodriguez-a/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('chen.m2025', 'Ming Chen', 'Past Co-Op', 'Cybersecurity', 'Khoury');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('thompson.emma', 'Emma Thompson', 'Past Co-Op', 'Chemistry', 'COS', 'www.linkedin.com/in/thompson-emma/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('kim.s2024', 'Sophia Kim', 'Current Seeker', 'Biomedical Engineering', 'COE');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('martinez.d25', 'Daniel Martinez', 'Current Seeker', 'Business', 'D''Amore-McKim');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('patel.r', 'Rohan Patel', 'Current Seeker', 'Data Science', 'Khoury');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('williams.o2026', 'Owen Williams', 'Current Seeker', 'English', 'CAMD');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('nguyen.liam', 'Liam Nguyen', 'Past Co-Op', 'Biomedical Engineering', 'COE', 'www.linkedin.com/in/nguyen-liam/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('baker.z23', 'Zachary Baker', 'Past Co-Op', 'Business', 'D''Amore-McKim', 'www.linkedin.com/in/baker-z/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('garcia.e', 'Elena Garcia', 'Current Seeker', 'Electrical Engineering', 'COE');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('jones.isabella', 'Isabella Jones', 'Past Co-Op', 'Electrical Engineering', 'COE', 'www.linkedin.com/in/jones-isabella/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('lee.n2025', 'Nathan Lee', 'Current Seeker', 'Electrical Engineering', 'COE');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('wilson.a', 'Ava Wilson', 'Past Co-Op', 'Media Arts', 'CAMD', 'www.linkedin.com/in/wilson-a/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('brown.caleb', 'Caleb Brown', 'Past Co-Op', 'Neuroscience', 'COS', 'www.linkedin.com/in/brown-caleb/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('taylor.j24', 'Julia Taylor', 'Past Co-Op', 'Psychology', 'Bouve', 'www.linkedin.com/in/taylor-j/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('clark.m2023', 'Michael Clark', 'Past Co-Op', 'Philosophy', 'COSSH', 'www.linkedin.com/in/clark-m/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('moore.ben', 'Benjamin Moore', 'Past Co-Op', 'Media Arts', 'CAMD', 'www.linkedin.com/in/moore-ben/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('cooper.h', 'Hannah Cooper', 'Past Co-Op', 'Biomedical Engineering', 'COE', 'www.linkedin.com/in/cooper-h/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('white.d2026', 'David White', 'Current Seeker', 'Business', 'D''Amore-McKim');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('davis.lily', 'Lily Davis', 'Past Co-Op', 'Data Science', 'Khoury', 'www.linkedin.com/in/davis-lily/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('miller.j', 'James Miller', 'Current Seeker', 'Data Science', 'Khoury');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('lopez.s2024', 'Sophia Lopez', 'Current Seeker', 'Media Arts', 'CAMD');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('scott.alex', 'Alexander Scott', 'Current Seeker', 'Philosophy', 'COSSH');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('hall.grace', 'Grace Hall', 'Past Co-Op', 'Psychology', 'Bouve', 'www.linkedin.com/in/hall-grace/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('green.l2025', 'Lucas Green', 'Current Seeker', 'Neuroscience', 'COS');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('king.emma', 'Emma King', 'Past Co-Op', 'Journalism', 'CAMD', 'www.linkedin.com/in/king-emma/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('adams.ryan', 'Ryan Adams', 'Past Co-Op', 'Cybersecurity', 'Khoury', 'www.linkedin.com/in/adams-ryan/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('carter.o', 'Olivia Carter', 'Past Co-Op', 'Neuroscience', 'COS', 'www.linkedin.com/in/carter-o/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('turner.e2026', 'Ethan Turner', 'Current Seeker', 'Chemical Engineering', 'COE');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('phillips.a', 'Andrew Phillips', 'Current Seeker', 'Biomedical Engineering', 'COE');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('rivera.sebastian', 'Sebastian Rivera', 'Current Seeker', 'Public Health', 'Bouve');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('evans.m2025', 'Mia Evans', 'Current Seeker', 'Nursing', 'Bouve');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('edwards.chris', 'Chris Edwards', 'Past Co-Op', 'Chemistry', 'COS', 'www.linkedin.com/in/edwards-chris/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college) 
+INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('collins.n', 'Noah Collins', 'Current Seeker', 'Media Arts', 'CAMD');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin) 
+INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('sanders.w', 'William Sanders', 'Past Co-Op', 'Business', 'D''Amore-McKim', 'www.linkedin.com/in/sanders-w/');
 
 INSERT INTO data_analyst (email, name, role) VALUES ('fchree0@gmail.com', 'Fredrick Chree', 'Data Analyst');
@@ -323,33 +323,49 @@ INSERT INTO applications (admin_id, version, description, name) VALUES (27, '4.2
 INSERT INTO applications (admin_id, version, description, name) VALUES (15, '1.3', 'Application for real-time collaboration on hiring decisions', 'Collaboration Platform');
 INSERT INTO applications (admin_id, version, description, name) VALUES (10, '4.3', 'Tool for analyzing and managing job review data', 'Review Data Analyzer');
 
-insert into logs (app_id, timestamp) values (11, '2024-09-16 08:59:32');
-insert into logs (app_id, timestamp) values (24, '2024-05-27 16:37:50');
-insert into logs (app_id, timestamp) values (27, '2024-10-28 13:50:59');
-insert into logs (app_id, timestamp) values (24, '2024-01-12 02:59:39');
-insert into logs (app_id, timestamp) values (10, '2024-10-02 08:22:04');
-insert into logs (app_id, timestamp) values (28, '2024-07-25 21:08:33');
-insert into logs (app_id, timestamp) values (9, '2024-09-05 09:47:56');
-insert into logs (app_id, timestamp) values (16, '2024-04-12 20:59:14');
-insert into logs (app_id, timestamp) values (25, '2024-07-13 06:15:03');
-insert into logs (app_id, timestamp) values (9, '2024-04-02 19:09:03');
-insert into logs (app_id, timestamp) values (10, '2024-02-25 09:49:30');
-insert into logs (app_id, timestamp) values (25, '2024-10-21 04:03:33');
-insert into logs (app_id, timestamp) values (10, '2024-09-12 21:14:52');
-insert into logs (app_id, timestamp) values (16, '2024-01-25 18:57:02');
-insert into logs (app_id, timestamp) values (21, '2023-12-02 11:07:42');
-insert into logs (app_id, timestamp) values (13, '2024-11-02 11:44:31');
-insert into logs (app_id, timestamp) values (16, '2024-06-04 11:25:09');
-insert into logs (app_id, timestamp) values (25, '2024-04-20 06:53:43');
-insert into logs (app_id, timestamp) values (12, '2024-05-14 07:24:51');
-insert into logs (app_id, timestamp) values (17, '2024-04-12 23:34:25');
-insert into logs (app_id, timestamp) values (12, '2024-05-11 12:55:58');
-insert into logs (app_id, timestamp) values (27, '2024-07-16 19:48:29');
-insert into logs (app_id, timestamp) values (20, '2024-05-08 18:26:04');
-insert into logs (app_id, timestamp) values (16, '2024-03-02 06:19:29');
-insert into logs (app_id, timestamp) values (13, '2024-07-26 01:55:48');
-insert into logs (app_id, timestamp) values (28, '2024-05-08 00:22:09');
-insert into logs (app_id, timestamp) values (9, '2024-03-17 03:33:13');
-insert into logs (app_id, timestamp) values (21, '2024-01-19 13:54:01');
-insert into logs (app_id, timestamp) values (1, '2024-02-15 19:02:15');
-insert into logs (app_id, timestamp) values (27, '2024-04-12 09:37:06');
+INSERT INTO logs (app_id, timestamp) VALUES (11, '2024-09-16 08:59:32');
+INSERT INTO logs (app_id, timestamp) VALUES (24, '2024-05-27 16:37:50');
+INSERT INTO logs (app_id, timestamp) VALUES (27, '2024-10-28 13:50:59');
+INSERT INTO logs (app_id, timestamp) VALUES (24, '2024-01-12 02:59:39');
+INSERT INTO logs (app_id, timestamp) VALUES (10, '2024-10-02 08:22:04');
+INSERT INTO logs (app_id, timestamp) VALUES (28, '2024-07-25 21:08:33');
+INSERT INTO logs (app_id, timestamp) VALUES (9, '2024-09-05 09:47:56');
+INSERT INTO logs (app_id, timestamp) VALUES (16, '2024-04-12 20:59:14');
+INSERT INTO logs (app_id, timestamp) VALUES (25, '2024-07-13 06:15:03');
+INSERT INTO logs (app_id, timestamp) VALUES (9, '2024-04-02 19:09:03');
+INSERT INTO logs (app_id, timestamp) VALUES (10, '2024-02-25 09:49:30');
+INSERT INTO logs (app_id, timestamp) VALUES (25, '2024-10-21 04:03:33');
+INSERT INTO logs (app_id, timestamp) VALUES (10, '2024-09-12 21:14:52');
+INSERT INTO logs (app_id, timestamp) VALUES (16, '2024-01-25 18:57:02');
+INSERT INTO logs (app_id, timestamp) VALUES (21, '2023-12-02 11:07:42');
+INSERT INTO logs (app_id, timestamp) VALUES (13, '2024-11-02 11:44:31');
+INSERT INTO logs (app_id, timestamp) VALUES (16, '2024-06-04 11:25:09');
+INSERT INTO logs (app_id, timestamp) VALUES (25, '2024-04-20 06:53:43');
+INSERT INTO logs (app_id, timestamp) VALUES (12, '2024-05-14 07:24:51');
+INSERT INTO logs (app_id, timestamp) VALUES (17, '2024-04-12 23:34:25');
+INSERT INTO logs (app_id, timestamp) VALUES (12, '2024-05-11 12:55:58');
+INSERT INTO logs (app_id, timestamp) VALUES (27, '2024-07-16 19:48:29');
+INSERT INTO logs (app_id, timestamp) VALUES (20, '2024-05-08 18:26:04');
+INSERT INTO logs (app_id, timestamp) VALUES (16, '2024-03-02 06:19:29');
+INSERT INTO logs (app_id, timestamp) VALUES (13, '2024-07-26 01:55:48');
+INSERT INTO logs (app_id, timestamp) VALUES (28, '2024-05-08 00:22:09');
+INSERT INTO logs (app_id, timestamp) VALUES (9, '2024-03-17 03:33:13');
+INSERT INTO logs (app_id, timestamp) VALUES (21, '2024-01-19 13:54:01');
+INSERT INTO logs (app_id, timestamp) VALUES (1, '2024-02-15 19:02:15');
+INSERT INTO logs (app_id, timestamp) VALUES (27, '2024-04-12 09:37:06');
+INSERT INTO logs (app_id, timestamp) VALUES (15, '2024-06-15 10:20:45');
+INSERT INTO logs (app_id, timestamp) VALUES (18, '2024-03-08 14:13:22');
+INSERT INTO logs (app_id, timestamp) VALUES (11, '2024-08-09 22:45:30');
+INSERT INTO logs (app_id, timestamp) VALUES (22, '2024-02-28 15:32:19');
+INSERT INTO logs (app_id, timestamp) VALUES (14, '2024-03-25 07:19:50');
+INSERT INTO logs (app_id, timestamp) VALUES (19, '2024-05-11 17:24:55');
+INSERT INTO logs (app_id, timestamp) VALUES (23, '2024-07-30 10:11:08');
+INSERT INTO logs (app_id, timestamp) VALUES (8, '2024-10-01 09:14:03');
+INSERT INTO logs (app_id, timestamp) VALUES (6, '2024-01-22 21:03:55');
+INSERT INTO logs (app_id, timestamp) VALUES (2, '2024-11-11 19:34:40');
+INSERT INTO logs (app_id, timestamp) VALUES (4, '2024-08-18 02:55:43');
+INSERT INTO logs (app_id, timestamp) VALUES (3, '2024-09-26 12:43:29');
+INSERT INTO logs (app_id, timestamp) VALUES (26, '2024-04-05 04:11:21');
+INSERT INTO logs (app_id, timestamp) VALUES (5, '2024-06-07 03:52:13');
+INSERT INTO logs (app_id, timestamp) VALUES (29, '2024-07-04 16:27:38');
+
