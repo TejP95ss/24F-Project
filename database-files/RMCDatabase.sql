@@ -29,9 +29,9 @@ CREATE TABLE coop_position
     company_id integer,
     industry varchar(25),
     workload varchar(25),
-    hourly_wage float(2, 2),
+    hourly_wage decimal(4, 2),
     title varchar(25),
-    avg_rating float(1, 1),
+    avg_rating decimal(2, 1),
     description varchar(5000),
     FOREIGN KEY (company_id) REFERENCES company(id)
 );
@@ -50,7 +50,7 @@ CREATE TABLE review
     id integer AUTO_INCREMENT PRIMARY KEY,
     student_id integer,
     review_text varchar(255),
-    rating float(1, 1),
+    rating decimal(2, 1),
     position_id int,
     FOREIGN KEY (student_id) REFERENCES student(id),
     FOREIGN KEY (position_id) REFERENCES coop_position(id)
