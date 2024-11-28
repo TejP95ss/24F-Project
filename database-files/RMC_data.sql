@@ -97,3 +97,93 @@ INSERT INTO company (industry, name) VALUES ('Technology', 'Trudeo');
 INSERT INTO company (industry, name) VALUES ('Real Estate', 'Skinder');
 INSERT INTO company (industry, name) VALUES ('Home Furnishings', 'Camido');
 INSERT INTO company (industry, name) VALUES ('Insurance', 'Meetz');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (1, 'Insurance', 'Average', 35.42, 'Recruiter Intern', 3.3, 'Assist in identifying and recruiting candidates for open insurance roles.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (2, 'Technology', 'Heavy', 35.17, 'Marketing Intern', 3.9, 'Support marketing campaigns, conduct market research, and assist with social media content.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (3, 'Automotive', 'Average', 33.46, 'Automotive Design Co-Op', 4.2, 'Assist in the design and development of automobile components and systems.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (4, 'Medical Devices', 'Average', 26.99, 'Biomedical Intern', 3.5, 'Support the development and testing of medical instruments and devices.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (5, 'Real Estate', 'Heavy', 18.93, 'Property Management Co-Op', 3.9, 'Help manage tenant relations, property operations, and leasing activities.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (6, 'Chemicals', 'Average', 24.67, 'Chemical Engineering Intern', 3.5, 'Assist with process improvement and quality control in chemical manufacturing.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (7, 'Technology', 'Medium', 28.66, 'Software Engineer Intern', 3.0, 'Support the development and testing of new software products.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (8, 'Technology', 'Heavy', 37.11, 'Data Analyst Intern', 3.3, 'Assist in analyzing and visualizing data for business decision-making.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (9, 'Energy', 'Heavy', 18.6, 'Energy Analyst Co-Op', 4.9, 'Analyze energy production and usage trends to identify efficiency opportunities.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (10, 'Biotechnology', 'Heavy', 39.29, 'Biotech Research Intern', 3.6, 'Assist with laboratory experiments and analysis in biological research.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (11, 'Media and Entertainment', 'Light', 27.02, 'Media Production Intern', 2.7, 'Support video editing, sound design, and pre-production activities.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (12, 'Healthcare', 'Heavy', 18.07, 'Clinical Research Intern', 4.4, 'Assist with data collection and patient interactions in clinical trials.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (13, 'Technology', 'Light', 27.23, 'UX/UI Design Intern', 4.3, 'Design and test user interfaces for mobile and web applications.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (14, 'Healthcare', 'Heavy', 29.52, 'Healthcare Administration Co-Op', 2.8, 'Support administrative operations, including scheduling and billing.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (15, 'Technology', 'Heavy', 21.46, 'Quality Assurance Intern', 2.8, 'Test and document software products to ensure functionality and usability.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (16, 'Energy', 'Medium', 26.54, 'Environmental Engineering Co-Op', 3.0, 'Assist with sustainability projects and environmental impact assessments.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (17, 'Technology', 'Heavy', 21.48, 'Network Security Intern', 3.3, 'Support cybersecurity teams in identifying and resolving network vulnerabilities.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (18, 'Metals and Mining', 'Heavy', 18.02, 'Materials Science Co-Op', 4.8, 'Conduct research and testing on metal materials for quality and durability.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (19, 'Media and Entertainment', 'Heavy', 35.82, 'Content Creation Intern', 2.6, 'Develop creative content for digital marketing and social media campaigns.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (20, 'Chemicals', 'Average', 31.51, 'Chemical Lab Intern', 3.0, 'Assist in conducting experiments and preparing chemical solutions.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (21, 'Food and Beverage', 'Medium', 21.93, 'Food Scientist Co-Op', 4.9, 'Assist in developing and testing new food products and quality control.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (22, 'Real Estate', 'Medium', 31.8, 'Real Estate Development Intern', 4.0, 'Assist in market research and feasibility analysis for new developments.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (23, 'Technology', 'Light', 27.07, 'General Manager Intern', 2.2, 'Assist with management of daily operations and team coordination.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (24, 'Technology', 'Heavy', 23.67, 'IT Support Co-Op', 2.4, 'Provide technical support and troubleshoot IT issues in a corporate setting.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (25, 'Technology', 'Average', 21.42, 'Project Manager Intern', 4.6, 'Assist in managing project timelines and deliverables.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (26, 'Energy', 'Average', 28.17, 'Nuclear Engineer Intern', 3.2, 'Support safety and efficiency initiatives in nuclear power generation.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (27, 'Legal Services', 'Light', 28.24, 'Paralegal Intern', 2.1, 'Assist with drafting legal documents and preparing case files.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (28, 'Real Estate', 'Heavy', 39.44, 'Property Appraisal Intern', 2.3, 'Conduct property valuations and prepare reports for clients.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (29, 'Insurance', 'Light', 28.18, 'Underwriting Intern', 4.4, 'Assist in evaluating insurance applications and determining policy terms.');
+
+INSERT INTO coop_position (company_id, industry, workload, hourly_wage, title, avg_rating, description)
+VALUES (30, 'Technology', 'Average', 27.0, 'Systems Administrator Intern', 3.2, 'Monitor and maintain system performance for corporate IT infrastructure.');
