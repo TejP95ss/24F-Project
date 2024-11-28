@@ -111,7 +111,7 @@ CREATE TABLE data_analyst
     id integer AUTO_INCREMENT PRIMARY KEY,
     email varchar(25),
     name varchar(25),
-    role varchar(15)
+    role varchar(40)
 );
 
 CREATE TABLE tasks
