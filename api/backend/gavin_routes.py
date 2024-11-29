@@ -55,12 +55,6 @@ def load_backup_app():
     response.status_code = 200
     return response
 
-#SELECT a.name, l.timestamp
-#FROM applications a
-##JOIN logs l ON a.id = l.app_id
-#ORDER BY l.timestamp DESC
-#LIMIT 10;
-
 # Finds the last 10 submitted applications
 @gavin.route('/applications/recent', methods=['GET'])
 def ten_recent_applications():
@@ -70,6 +64,23 @@ def ten_recent_applications():
         JOIN logs l ON a.id = l.app_id
         ORDER BY l.timestamp DESC
         LIMIT 10
+    '''
+
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    theData = cursor.fetchall()
+
+    response = make_response(jsonify(theData))
+    response.status_code = 200
+    return response
+
+# Finds all student IDs with a valid profile
+@gavin.route('/student/id/profile', methods=['GET'])
+def list_student_profile_ids():
+    query = f'''
+        SELECT id
+        FROM student
+        WHERE profileType IS NOT NULL
     '''
 
     cursor = db.get_db().cursor()
