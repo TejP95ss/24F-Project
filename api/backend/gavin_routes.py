@@ -4,7 +4,7 @@ from backend.db_connection import db
 gavin = Blueprint('gavin', __name__)
 
 # Gets student ids who are on linkedin and open to connect
-@gavin.route('/id/<id>', methods=['GET'])
+@gavin.route('/id', methods=['GET'])
 def find_searching_students(id):
     query = f'''
         SELECT s.id
