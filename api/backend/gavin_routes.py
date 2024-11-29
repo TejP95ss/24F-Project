@@ -36,3 +36,21 @@ def count_student_users(id):
     response = make_response(jsonify(theData))
     response.status_code = 200
     return response
+
+# Adds a backup application into the log
+@gavin.route('/logs/backup', methods=['PUT'])
+def load_backup_app(app_id):
+    query = f'''
+        INSERT INTO logs (app_id)
+        SELECT id 
+        FROM applications
+        WHERE version = 'backup'
+    '''
+
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    theData = cursor.fetchall()
+
+    response = make_response(jsonify(theData))
+    response.status_code = 200
+    return response
