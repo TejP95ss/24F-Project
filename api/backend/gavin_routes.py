@@ -5,7 +5,7 @@ gavin = Blueprint('gavin', __name__)
 
 # Gets student ids who are on linkedin and open to connect
 @gavin.route('/id', methods=['GET'])
-def find_searching_students(id):
+def find_searching_students():
     query = f'''
         SELECT s.id
         FROM student s
@@ -23,7 +23,7 @@ def find_searching_students(id):
 
 # Counts the current number of current student users
 @gavin.route('/current_users', methods=['GET'])
-def count_student_users(id):
+def count_student_users():
     query = f'''
         SELECT COUNT(*) AS current_users
         FROM student s
@@ -39,7 +39,7 @@ def count_student_users(id):
 
 # Adds a backup application into the log
 @gavin.route('/logs/backup', methods=['PUT'])
-def load_backup_app(app_id):
+def load_backup_app():
     query = f'''
         INSERT INTO logs (app_id)
         SELECT id 
