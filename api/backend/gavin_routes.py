@@ -11,7 +11,22 @@ def find_searching_students(id):
         FROM student s
         WHERE s.linkedin IS NOT NULL
         AND s.openToConnect = TRUE
-        WHERE s.id = {id}
+    '''
+
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    theData = cursor.fetchall()
+
+    response = make_response(jsonify(theData))
+    response.status_code = 200
+    return response
+
+# Counts the current number of current student users
+@gavin.route('/current_users', methods=['GET'])
+def count_student_users(id):
+    query = f'''
+        SELECT COUNT(*) AS current_users
+        FROM student s
     '''
 
     cursor = db.get_db().cursor()
