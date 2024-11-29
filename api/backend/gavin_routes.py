@@ -54,3 +54,28 @@ def load_backup_app(app_id):
     response = make_response(jsonify(theData))
     response.status_code = 200
     return response
+
+#SELECT a.name, l.timestamp
+#FROM applications a
+##JOIN logs l ON a.id = l.app_id
+#ORDER BY l.timestamp DESC
+#LIMIT 10;
+
+# Finds the last 10 submitted applications
+@gavin.route('/applications/recent', methods=['GET'])
+def ten_recent_applications():
+    query = f'''
+        SELECT a.name, l.timestamp
+        FROM applications a
+        JOIN logs l ON a.id = l.app_id
+        ORDER BY l.timestamp DESC
+        LIMIT 10
+    '''
+
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    theData = cursor.fetchall()
+
+    response = make_response(jsonify(theData))
+    response.status_code = 200
+    return response
