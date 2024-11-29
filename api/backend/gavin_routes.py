@@ -10,7 +10,7 @@ def find_searching_students():
         SELECT s.id
         FROM student s
         WHERE s.linkedin IS NOT NULL
-        AND s.openToConnect = TRUE
+        AND s.openToConnect = TRUE;
     '''
 
     cursor = db.get_db().cursor()
@@ -26,7 +26,7 @@ def find_searching_students():
 def count_student_users():
     query = f'''
         SELECT COUNT(*) AS current_users
-        FROM student s
+        FROM student s;
     '''
 
     cursor = db.get_db().cursor()
@@ -44,7 +44,7 @@ def load_backup_app():
         INSERT INTO logs (app_id)
         SELECT id 
         FROM applications
-        WHERE version = 'backup'
+        WHERE version = 'backup';
     '''
 
     cursor = db.get_db().cursor()
@@ -63,7 +63,7 @@ def ten_recent_applications():
         FROM applications a
         JOIN logs l ON a.id = l.app_id
         ORDER BY l.timestamp DESC
-        LIMIT 10
+        LIMIT 10;
     '''
 
     cursor = db.get_db().cursor()
@@ -80,7 +80,7 @@ def list_student_profile_ids():
     query = f'''
         SELECT id
         FROM student
-        WHERE profileType IS NOT NULL
+        WHERE profileType IS NOT NULL;
     '''
 
     cursor = db.get_db().cursor()
@@ -90,3 +90,13 @@ def list_student_profile_ids():
     response = make_response(jsonify(theData))
     response.status_code = 200
     return response
+
+# Gets total count of co-ops for each student
+@gavin.route('/student/coops', methods=['GET'])
+def student_total_coops():
+    query = f'''
+        SELECT s.id, s.username, COUNT(sc.coop_id) AS coop_count
+        FROM student s
+        LEFT JOIN student_coops sc ON s.id = sc.student_id
+        GROUP BY s.id, s.username;
+    '''
