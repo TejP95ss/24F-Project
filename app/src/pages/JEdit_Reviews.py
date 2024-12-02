@@ -1,10 +1,7 @@
 import streamlit as st
 import requests
 
-# Title of the Page
 st.title("Add or Update Co-op Reviews")
-
-# Select Functionality
 option = st.radio("What would you like to do?", ["Add Review", "Update Review"])
 
 # Add a Review
@@ -17,13 +14,11 @@ if option == "Add Review":
 
     if st.button("Submit Review"):
         if position_id and student_id and review_text:
-            # Prepare data
             data = {
                 "rating": rating,
                 "review_text": review_text,
                 "student_id": student_id
             }
-            # Make POST request
             response = requests.post(f"http://web-api:4000/reviews/{position_id}", json=data)
             if response.status_code == 201:
                 st.success("Review added successfully!")
@@ -41,12 +36,10 @@ elif option == "Update Review":
 
     if st.button("Update Review"):
         if review_id and review_text:
-            # Prepare data
             data = {
                 "rating": rating,
                 "review_text": review_text
             }
-            # Make PUT request
             response = requests.put(f"http://web-api:4000/reviews/{review_id}", json=data)
             if response.status_code == 200:
                 st.success("Review updated successfully!")

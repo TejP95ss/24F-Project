@@ -22,7 +22,7 @@ if st.button('Get Information About a Coop',
 if st.button('Edit Skills', 
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/Edit_Skills.py')
+  st.switch_page('pages/JEdit_Skills.py')
 
 if st.button('Edit Reviews', 
              type='primary',
