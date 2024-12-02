@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify, make_response, current_app
-from db_connection import db
+from backend.db_connection import db
 
 natasha = Blueprint('natasha', __name__)
 
