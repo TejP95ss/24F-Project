@@ -133,7 +133,7 @@ CREATE TABLE reports
     id integer AUTO_INCREMENT PRIMARY KEY,
     company_id integer,
     created_by integer,
-    report_name varchar(25),
+    report_name varchar(75),
     industry_compare varchar(50),
     timestamp datetime DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (company_id) REFERENCES company(id),
