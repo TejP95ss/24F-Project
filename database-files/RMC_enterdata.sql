@@ -509,3 +509,24 @@ VALUES (30, 1, 'Annual Recruitment Review', 'Engineering vs. Manufacturing', '20
 
 INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
 VALUES (16, 29, 'Job Satisfaction Report', 'Retail vs. Biotech', '2024-09-22 13:09:51');
+
+INSERT INTO skill (name) VALUES ('Python Programming');
+INSERT INTO skill (name) VALUES ('Data Analysis');
+INSERT INTO skill (name) VALUES ('Machine Learning');
+INSERT INTO skill (name) VALUES ('Web Development');
+INSERT INTO skill (name) VALUES ('Project Management');
+INSERT INTO skill (name) VALUES ('Team Leadership');
+INSERT INTO skill (name) VALUES ('Public Speaking');
+INSERT INTO skill (name) VALUES ('Time Management');
+INSERT INTO skill (name) VALUES ('Technical Writing');
+INSERT INTO skill (name) VALUES ('Graphic Design');
+INSERT INTO skill (name) VALUES ('Marketing Strategy');
+INSERT INTO skill (name) VALUES ('Financial Modeling');
+INSERT INTO skill (name) VALUES ('Customer Service');
+INSERT INTO skill (name) VALUES ('SQL Database Management');
+INSERT INTO skill (name) VALUES ('Cloud Computing');
+INSERT INTO skill (name) VALUES ('Network Security');
+INSERT INTO skill (name) VALUES ('Mobile App Development');
+INSERT INTO skill (name) VALUES ('Quality Assurance Testing');
+INSERT INTO skill (name) VALUES ('Digital Marketing');
+INSERT INTO skill (name) VALUES ('Supply Chain Management');
