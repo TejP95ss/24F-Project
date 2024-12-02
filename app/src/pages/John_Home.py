@@ -27,4 +27,4 @@ if st.button('Edit Skills',
 if st.button('Edit Reviews', 
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/Edit_Review.py')
+  st.switch_page('pages/JEdit_Reviews.py')
