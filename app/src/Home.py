@@ -57,6 +57,16 @@ if st.button("Act as John, a Political Strategy Advisor",
     logger.info("Logging in as Political Strategy Advisor Persona")
     st.switch_page('pages/John_Home.py')
 
+
+if st.button("Act as Gavin, a system administrator",
+             type = 'primary',
+             use_container_width=True):
+    st.session_state['authenticated'] = True
+    st.session_state['role'] = 'sys_admin'
+    st.session_state['first_name'] = 'Gavin'
+    logger.info("Logging in as System Administrator Gavin")
+    st.switch_page('pages/Gavin_Home.py')
+
 if st.button('Act as Mohammad, an USAID worker', 
             type = 'primary', 
             use_container_width=True):
