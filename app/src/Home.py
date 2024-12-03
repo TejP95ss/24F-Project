@@ -82,4 +82,4 @@ if st.button('Act as Natasha, a Past Co-Op Student',
     st.session_state['authenticated'] = True
     st.session_state['role'] = 'student'
     st.session_state['first_name'] = 'Natasha'
-    st.switch_page('pages/20_Admin_Home.py')
+    st.switch_page('pages/Natasha_Home.py')
