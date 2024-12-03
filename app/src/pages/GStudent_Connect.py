@@ -9,7 +9,7 @@ SideBarLinks()
 st.title("List of Students Ready to Connect on Linkedin")
 
 # pulls the data
-results = requests.get(f"http://web-api:4000/id")
+results = requests.get(f"http://web-api:4000/id").json()
 
 # Display the details in a readable format
 st.subheader("List of IDs")
