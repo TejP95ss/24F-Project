@@ -1,30 +1,52 @@
 import streamlit as st
 import requests
 
+# Title of the Page
 st.title("Co-op Trends and Satisfaction")
-st.write("Analyze trends and satisfaction data for co-op positions.")
 
-# Input for position ID
-position_id = st.text_input("Enter Position ID to get trends:", "1")
+# Input for Co-op Position ID
+position_id = st.text_input("Enter the Co-op Position ID for Trends:", "")
 
-# Fetch co-op summary
-if st.button("Get Co-op Summary"):
-    url = f"http://127.0.0.1:5000/trends/{position_id}"
-    response = requests.get(url)
-    if response.status_code == 200:
-        summary_data = response.json()
-        st.write("### Co-op Summary:")
-        st.json(summary_data)
+# Fetch Co-op Trends Button
+if st.button("Fetch Co-op Trends"):
+    if position_id:
+        try:
+            # Make the API request to the Flask route
+            response = requests.get(f"http://web-api:4000/trends/{position_id}")
+            
+            if response.status_code == 200:
+                # Parse the JSON response
+                trends = response.json()
+                if trends:
+                    st.subheader("Co-op Trends")
+                    st.write(f"**Company Name:** {trends[0]['name']}")
+                    st.write(f"**Position Title:** {trends[0]['title']}")
+                    st.write(f"**Average Rating:** {trends[0]['avg_rating']}")
+                else:
+                    st.error("No trends data found for the given ID.")
+            else:
+                st.error(f"Failed to fetch trends. HTTP Status Code: {response.status_code}")
+        except Exception as e:
+            st.error(f"An error occurred: {e}")
     else:
-        st.error("Failed to fetch co-op summary data. Please check the Position ID.")
+        st.warning("Please enter a Co-op Position ID.")
 
-# Fetch company satisfaction
-if st.button("Get Company Satisfaction by Industry"):
-    url = "http://127.0.0.1:5000/companies/satisfaction"
-    response = requests.get(url)
-    if response.status_code == 200:
-        satisfaction_data = response.json()
-        st.write("### Company Satisfaction by Industry:")
-        st.json(satisfaction_data)
-    else:
-        st.error("Failed to fetch satisfaction data.")
+# Fetch Company Satisfaction Button
+if st.button("Fetch Company Satisfaction"):
+    try:
+        # Make the API request to the Flask route
+        response = requests.get("http://web-api:4000/companies/satisfaction")
+        
+        if response.status_code == 200:
+            # Parse the JSON response
+            satisfaction = response.json()
+            st.subheader("Company Satisfaction by Industry")
+            for company in satisfaction:
+                st.write(f"**Company Name:** {company['name']}")
+                st.write(f"**Industry:** {company['industry']}")
+                st.write(f"**Average Satisfaction:** {company['avg_satisfaction']}")
+                st.write("---")
+        else:
+            st.error(f"Failed to fetch satisfaction data. HTTP Status Code: {response.status_code}")
+    except Exception as e:
+        st.error(f"An error occurred: {e}")
