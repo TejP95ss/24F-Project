@@ -119,11 +119,11 @@ CREATE TABLE tasks
     id integer AUTO_INCREMENT PRIMARY KEY,
     report_id integer,
     created_by integer,
-    name varchar(25),
+    name varchar(40),
     status varchar(15),
     assigned_to integer,
     timestamp datetime DEFAULT CURRENT_TIMESTAMP,
-    description varchar(100),
+    description varchar(200),
     FOREIGN KEY (created_by) REFERENCES admin(id),
     FOREIGN KEY (assigned_to) REFERENCES data_analyst(id)
 );
@@ -133,7 +133,7 @@ CREATE TABLE reports
     id integer AUTO_INCREMENT PRIMARY KEY,
     company_id integer,
     created_by integer,
-    report_name varchar(75),
+    report_name varchar(50),
     industry_compare varchar(50),
     timestamp datetime DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (company_id) REFERENCES company(id),
