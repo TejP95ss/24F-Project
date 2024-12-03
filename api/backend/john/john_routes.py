@@ -34,6 +34,17 @@ def add_review(id):
     comments = review_data['review_text']
     user_id = review_data['student_id']
 
+    position_check_query = f"SELECT id FROM coop_position WHERE id = {id}"
+    cursor = db.get_db().cursor()
+    cursor.execute(position_check_query)
+    position_exists = cursor.fetchone()
+    
+    if not position_exists:
+        current_app.logger.error(f"No position found with ID: {id}")
+        response = make_response(jsonify({"error": f"No position found with ID: {id}"}))
+        response.status_code = 404
+        return response
+
     query = f'''
         INSERT INTO review (rating, review_text, student_id, position_id)
         VALUES ({rating}, '{comments}', {user_id}, {id})
@@ -92,6 +103,17 @@ def update_review(id):
     review_data = request.json
     rating = review_data['rating']
     comments = review_data['review_text']
+
+    review_check_query = f"SELECT id FROM review WHERE id = {id}"
+    cursor = db.get_db().cursor()
+    cursor.execute(review_check_query)
+    review_exists = cursor.fetchone()
+    
+    if not review_exists:
+        current_app.logger.error(f"No review found with ID: {id}")
+        response = make_response(jsonify({"error": f"No review found with ID: {id}"}))
+        response.status_code = 404
+        return response
 
     query = f'''
         UPDATE review

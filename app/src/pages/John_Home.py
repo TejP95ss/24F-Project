@@ -17,7 +17,7 @@ st.write('### What would you like to do today?')
 if st.button('Get Information About a Coop', 
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/Coop_Info.py')
+  st.switch_page('pages/JCoop_Info.py')
 
 if st.button('Edit Skills', 
              type='primary',
