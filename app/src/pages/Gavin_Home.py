@@ -30,16 +30,6 @@ if st.button('Reload a backup app into the log',
              use_container_width=True):
   st.switch_page('pages/GLogs_Backup.py')
 
-if st.button('Retrieve the last 10 submitted applications',
-             type='primary',
-             use_container_width=True):
-  st.switch_page('pages/GRecent_Applications.py')
-
-if st.button('Find all student IDs with a valid profile',
-             type='primary',
-             use_container_width=True):
-  st.switch_page('pages/GStudent_Id_Profile.py')
-
 if st.button('Get a count for the number of co-ops for each student',
              type='primary',
              use_container_width=True):
