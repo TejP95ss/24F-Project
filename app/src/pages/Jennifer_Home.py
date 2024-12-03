@@ -13,3 +13,13 @@ st.title(f"Welcome {st.session_state['first_name']}.")
 st.write('')
 st.write('')
 st.write('### What would you like to do today?')
+
+# Navigation menu for Jennifer's pages
+page_options = [
+    "Co-op Trends and Summary",
+    "Skills Insights",
+    "Review Management",
+    "Company Satisfaction Analysis",
+    "Student Participation Analysis"
+]
+selected_page = st.sidebar.selectbox("Select a Page", page_options)
