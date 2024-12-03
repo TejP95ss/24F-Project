@@ -9,7 +9,7 @@ SideBarLinks()
 st.title("Individual Student Co-op Count")
 
 # pulls the data
-results = requests.get(f"http://web-api:4000//student/coop_count")
+results = requests.get(f"http://web-api:4000//student/coop_count").json()
 
 # Display the details in a readable format
 st.subheader("Student Co-op Counts")
