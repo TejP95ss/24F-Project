@@ -8,7 +8,7 @@ st.write("Analyze trends and summary data for co-op positions.")
 position_id = st.text_input("Enter Position ID:", "1")
 
 if st.button("Get Co-op Summary"):
-    url = f"http://127.0.0.1:5000/trends/{position_id}"  # Replace with your Flask server URL
+    url = f"http://web-api:4000/data_analyst{position_id}" 
     response = requests.get(url)
     if response.status_code == 200:
         summary_data = response.json()
