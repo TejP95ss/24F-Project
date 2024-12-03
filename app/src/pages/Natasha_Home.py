@@ -23,17 +23,17 @@ if st.button('Create and Update Profile',
 if st.button('Edit Your Reviews', 
              type='primary',
              use_container_width=True):
-    st.switch_page('__')
+    st.switch_page('pages/Natasha_Edit_Reviews.py')
 
 if st.button('Explore Student Database', 
              type='primary',
              use_container_width=True):
-    st.switch_page('___')
+    st.switch_page('pages/Natasha_Explore_Students.py')
 
 if st.button('View Reviews', 
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/Jennifer_Skills_Insights.py')
+    st.switch_page('pages/Natasha_View_Reviews.py')
 
 
 
