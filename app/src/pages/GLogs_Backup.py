@@ -6,11 +6,14 @@ st.set_page_config(layout = 'wide')
 SideBarLinks()
 
 # Title of the Page
-st.title("Placeholder")
+st.title("Restore Backup Log")
 
-# pulls the data
-results = requests.get(f"http://web-api:4000/current_users")
-
-# Display the details in a readable format
-st.subheader("Number of Current Student Users")
-st.dataframe(results)
+# Button to restore backup
+if st.button('Restore Backup',
+             type = 'primary',
+             use_container_width=True):
+    response = requests.put(f"http://web-api:4000/logs_backup")
+    if response.status_code == 200:
+        st.success("Backup Restored Successfully!")
+    else:
+        st.error(f"Failed to restore backup. HTTP Status: {response.status_code}")
