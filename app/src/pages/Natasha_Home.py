@@ -1,7 +1,7 @@
 import logging
 logger = logging.getLogger(__name__)
 
-import streamlit as st
+import streamlit as st # type: ignore
 from modules.nav import SideBarLinks
 
 st.set_page_config(layout = 'wide')
@@ -14,17 +14,27 @@ st.write('')
 st.write('')
 st.write('### What would you like to do today?')
 
-# Navigation buttons for Jennifer's functionalities
-if st.button('Analyze Co-op Trends and Summary', 
+# Navigation buttons for Natasha's functionalities
+if st.button('Create and Update Profile', 
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/Jennifer_Trends_Summary.py')
+    st.switch_page('pages/Natasha_Profile_Updates.py')
 
-if st.button('Explore Skills Insights', 
+if st.button('Edit Your Reviews', 
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/Jennifer_Skills_Insights.py')
+    st.switch_page('pages/Natasha_Edit_Reviews.py')
 
-if st.button # stub
+if st.button('Explore Student Database', 
+             type='primary',
+             use_container_width=True):
+    st.switch_page('pages/Natasha_Explore_Students.py')
+
+if st.button('View Reviews', 
+             type='primary',
+             use_container_width=True):
+    st.switch_page('pages/Natasha_View_Reviews.py')
+
+
 
 
