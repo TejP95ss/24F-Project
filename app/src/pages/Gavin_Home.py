@@ -33,7 +33,7 @@ if st.button('Reload a backup app into the log',
 if st.button('Get a count for the number of co-ops for each student',
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/GStudent/Coop_Count.py')
+  st.switch_page('pages/GStudent_Coop_Count.py')
 
 if st.button('Hire a new data analyst',
              type='primary',
