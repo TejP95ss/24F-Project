@@ -100,3 +100,11 @@ def student_total_coops():
         LEFT JOIN student_coops sc ON s.id = sc.student_id
         GROUP BY s.id, s.username;
     '''
+
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    theData = cursor.fetchall()
+
+    response = make_response(jsonify(theData))
+    response.status_code = 200
+    return response
