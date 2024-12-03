@@ -38,7 +38,7 @@ def count_student_users():
     return response
 
 # Adds a backup application into the log
-@gavin.route('/logs/backup', methods=['PUT'])
+@gavin.route('/logs_backup', methods=['PUT'])
 def load_backup_app():
     query = f'''
         INSERT INTO logs (app_id)
@@ -56,7 +56,7 @@ def load_backup_app():
     return response
 
 # Finds the last 10 submitted applications
-@gavin.route('/applications/recent', methods=['GET'])
+@gavin.route('/recent_applications', methods=['GET'])
 def ten_recent_applications():
     query = f'''
         SELECT a.name, l.timestamp
@@ -92,7 +92,7 @@ def list_student_profile_ids():
     return response
 
 # Gets total count of co-ops for each student
-@gavin.route('/student/coops', methods=['GET'])
+@gavin.route('/student/coop_count', methods=['GET'])
 def student_total_coops():
     query = f'''
         SELECT s.id, s.username, COUNT(sc.coop_id) AS coop_count

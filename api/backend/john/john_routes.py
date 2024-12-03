@@ -16,6 +16,12 @@ def get_position_details(id):
     cursor.execute(query)
     position_details = cursor.fetchall()
 
+    if not position_details:
+        current_app.logger.error(f"No position found with ID: {id}")
+        response = make_response(jsonify({"error": f"No position found with ID: {id}"}))
+        response.status_code = 404
+        return response
+
     response = make_response(jsonify(position_details))
     response.status_code = 200
     return response
@@ -27,6 +33,17 @@ def add_review(id):
     rating = review_data['rating']
     comments = review_data['review_text']
     user_id = review_data['student_id']
+
+    position_check_query = f"SELECT id FROM coop_position WHERE id = {id}"
+    cursor = db.get_db().cursor()
+    cursor.execute(position_check_query)
+    position_exists = cursor.fetchone()
+    
+    if not position_exists:
+        current_app.logger.error(f"No position found with ID: {id}")
+        response = make_response(jsonify({"error": f"No position found with ID: {id}"}))
+        response.status_code = 404
+        return response
 
     query = f'''
         INSERT INTO review (rating, review_text, student_id, position_id)
@@ -48,6 +65,22 @@ def add_user_skill(id):
     skill_data = request.json
     skill_id = skill_data['skill_id']
 
+    student_and_skill = f"""
+    SELECT 'student' AS type FROM student WHERE id = {id}
+    UNION
+    SELECT 'skill' AS type FROM skill WHERE id = {skill_id};
+    """
+    cursor = db.get_db().cursor()
+    cursor.execute(student_and_skill)
+    exists = cursor.fetchall()
+    
+    types_found = {row['type'] for row in exists}
+    
+    if 'student' not in types_found or 'skill' not in types_found:
+        response = make_response(jsonify({"error": f"Invalid student id or skill id given"}))
+        response.status_code = 404
+        return response
+    
     query = f'''
         INSERT INTO student_skills (student_id, skill_id)
         VALUES ({id}, {skill_id})
@@ -66,6 +99,17 @@ def add_user_skill(id):
 def delete_user_skill(id):
     skill_data = request.json
     skill_id = skill_data['skill_id']
+
+    student_skill_check = f"SELECT student_id FROM student_skills WHERE student_id = {id} AND skill_id = {skill_id}"
+    cursor = db.get_db().cursor()
+    cursor.execute(student_skill_check)
+    exists = cursor.fetchone()
+    
+    if not exists:
+        current_app.logger.error(f"{skill_id} is not associated with student id: {id}")
+        response = make_response(jsonify({"error": f"{skill_id} is not associated with student id: {id}"}))
+        response.status_code = 404
+        return response    
 
     query = f'''
         DELETE FROM student_skills
@@ -86,6 +130,17 @@ def update_review(id):
     review_data = request.json
     rating = review_data['rating']
     comments = review_data['review_text']
+
+    review_check_query = f"SELECT id FROM review WHERE id = {id}"
+    cursor = db.get_db().cursor()
+    cursor.execute(review_check_query)
+    review_exists = cursor.fetchone()
+    
+    if not review_exists:
+        current_app.logger.error(f"No review found with ID: {id}")
+        response = make_response(jsonify({"error": f"No review found with ID: {id}"}))
+        response.status_code = 404
+        return response
 
     query = f'''
         UPDATE review

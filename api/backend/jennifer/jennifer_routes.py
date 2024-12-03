@@ -115,3 +115,43 @@ def get_position_student_counts():
     response = make_response(jsonify(theData))
     response.status_code = 200
     return response
+
+# Adds a new review for a given co-op position (Jennifer's 7th story)
+@jennifer.route('/reviews', methods=['POST'])
+def add_review():
+    data = request.json
+    query = '''
+        INSERT INTO review (position_id, student_id, rating, comments)
+        VALUES (%s, %s, %s, %s)
+    '''
+    values = (data['position_id'], data['student_id'], data['rating'], data['comments'])
+    cursor = db.get_db().cursor()
+    cursor.execute(query, values)
+    db.get_db().commit()
+    return jsonify({"message": "Review added successfully!"}), 201
+
+# Updates an existing review (Jennifer's 8th story)
+@jennifer.route('/reviews/<int:review_id>', methods=['PUT'])
+def update_review(review_id):
+    data = request.json
+    query = '''
+        UPDATE review
+        SET rating = %s, comments = %s
+        WHERE id = %s
+    '''
+    values = (data['rating'], data['comments'], review_id)
+    cursor = db.get_db().cursor()
+    cursor.execute(query, values)
+    db.get_db().commit()
+    return jsonify({"message": "Review updated successfully!"}), 200
+
+# Deletes an existing review (Jennifer's 9th story)
+@jennifer.route('/reviews/<int:review_id>', methods=['DELETE'])
+def delete_review(review_id):
+    query = '''
+        DELETE FROM review WHERE id = %s
+    '''
+    cursor = db.get_db().cursor()
+    cursor.execute(query, (review_id,))
+    db.get_db().commit()
+    return jsonify({"message": "Review deleted successfully!"}), 200
