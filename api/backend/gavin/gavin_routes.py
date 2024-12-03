@@ -55,41 +55,6 @@ def load_backup_app():
     response.status_code = 200
     return response
 
-# Finds the last 10 submitted applications
-@gavin.route('/recent_applications', methods=['GET'])
-def ten_recent_applications():
-    query = f'''
-        SELECT a.name, l.timestamp
-        FROM applications a
-        JOIN logs l ON a.id = l.app_id
-        ORDER BY l.timestamp DESC
-        LIMIT 10;
-    '''
-
-    cursor = db.get_db().cursor()
-    cursor.execute(query)
-    theData = cursor.fetchall()
-
-    response = make_response(jsonify(theData))
-    response.status_code = 200
-    return response
-
-# Finds all student IDs with a valid profile
-@gavin.route('/student/id/profile', methods=['GET'])
-def list_student_profile_ids():
-    query = f'''
-        SELECT id
-        FROM student
-        WHERE profileType IS NOT NULL;
-    '''
-
-    cursor = db.get_db().cursor()
-    cursor.execute(query)
-    theData = cursor.fetchall()
-
-    response = make_response(jsonify(theData))
-    response.status_code = 200
-    return response
 
 # Gets total count of co-ops for each student
 @gavin.route('/student/coop_count', methods=['GET'])
@@ -130,3 +95,4 @@ def hire_analyst():
     response = make_response("User added successfully!")
     response.status_code = 201
     return response
+
