@@ -510,14 +510,75 @@ VALUES (30, 1, 'Annual Recruitment Review', 'Engineering vs. Manufacturing', '20
 INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
 VALUES (16, 29, 'Job Satisfaction Report', 'Retail vs. Biotech', '2024-09-22 13:09:51');
 
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (35, 30, 'Compile Quarterly Reports', 'In Progress', 24, '2024-03-02 19:32:47', 'Summarize co-op placement statistics by industry.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (2, 22, 'Review Employer Feedback', 'Not Started', 3, '2024-10-03 22:38:42', 'Analyze feedback submitted by employers on co-op students.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (8, 5, 'Add New Hires to Database', 'Complete', 5, '2024-05-06 03:07:08', 'Update the database with details of recently hired employees.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (42, 5, 'Generate Annual Review', 'Complete', 10, '2024-07-07 18:46:32', 'Create a detailed report summarizing system performance.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (6, 9, 'Analyze Student Surveys', 'In Progress', 8, '2024-01-24 11:40:39', 'Review survey results from students on recent co-op experiences.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (23, 15, 'Update Platform Analytics', 'Complete', 1, '2024-02-23 09:28:20', 'Incorporate recent data analytics for platform user activity.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (4, 6, 'Fix Bug Reports', 'In Progress', 18, '2024-02-08 23:30:40', 'Address reported system bugs from students and employers.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (12, 26, 'Monitor Logs for Errors', 'Not Started', 3, '2024-10-25 15:41:53', 'Review system logs for errors and anomalies.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (5, 24, 'Verify Employer Accounts', 'In Progress', 23, '2024-11-20 16:06:44', 'Check verification status of registered employers on the platform.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (27, 21, 'Prepare Monthly Trends Report', 'Not Started', 6, '2024-04-25 19:58:47', 'Identify trends in co-op applications and placements for the month.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (13, 8, 'Summarize Top Employers', 'Complete', 14, '2024-05-31 03:08:16', 'List top employers based on student feedback and placement rate.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (1, 19, 'Monitor Platform Usage', 'In Progress', 22, '2024-03-31 20:06:51', 'Analyze daily platform usage metrics to ensure system stability.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (32, 15, 'Review Co-op Success Rates', 'Complete', 2, '2024-07-15 09:58:38', 'Compare co-op success rates by major and industry.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (17, 28, 'Update Student Reviews', 'Not Started', 21, '2024-09-20 00:22:50', 'Add newly submitted student reviews to the database.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (38, 13, 'Evaluate System Feedback', 'Complete', 25, '2024-01-23 03:04:56', 'Review system feedback for areas of improvement.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (32, 21, 'Compile Employer Insights', 'In Progress', 9, '2024-06-29 18:40:35', 'Create an insight report based on employer reviews of the platform.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (5, 25, 'Enhance Search Features', 'Not Started', 19, '2024-07-16 13:38:30', 'Improve search filters for co-op job postings.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (10, 15, 'Update User Permissions', 'Complete', 8, '2024-08-11 14:30:25', 'Revise permissions for new hires to match their roles.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (20, 7, 'Backup System Data', 'In Progress', 14, '2024-09-12 10:22:30', 'Perform scheduled backup of all system data.');
+
+INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
+VALUES (15, 26, 'Update System Documentation', 'Not Started', 4, '2024-07-14 12:40:17', 'Add new sections on co-op platform features to the documentation.');
+
 INSERT INTO skill (name) VALUES ('Python Programming');
 INSERT INTO skill (name) VALUES ('Data Analysis');
 INSERT INTO skill (name) VALUES ('Machine Learning');
 INSERT INTO skill (name) VALUES ('Web Development');
 INSERT INTO skill (name) VALUES ('Project Management');
-INSERT INTO skill (name) VALUES ('Titration');
+INSERT INTO skill (name) VALUES ('Team Leadership');
 INSERT INTO skill (name) VALUES ('Public Speaking');
-INSERT INTO skill (name) VALUES ('Pipetting');
+INSERT INTO skill (name) VALUES ('Time Management');
 INSERT INTO skill (name) VALUES ('Technical Writing');
 INSERT INTO skill (name) VALUES ('Graphic Design');
 INSERT INTO skill (name) VALUES ('Marketing Strategy');
