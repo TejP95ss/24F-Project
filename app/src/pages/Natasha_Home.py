@@ -14,17 +14,27 @@ st.write('')
 st.write('')
 st.write('### What would you like to do today?')
 
-# Navigation buttons for Jennifer's functionalities
-if st.button('Analyze Co-op Trends and Summary', 
+# Navigation buttons for Natasha's functionalities
+if st.button('Create and Update Profile', 
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/Jennifer_Trends_Summary.py')
+    st.switch_page('_____')
 
-if st.button('Explore Skills Insights', 
+if st.button('Edit Your Reviews', 
+             type='primary',
+             use_container_width=True):
+    st.switch_page('__')
+
+if st.button('Explore Student Database', 
+             type='primary',
+             use_container_width=True):
+    st.switch_page('___')
+
+if st.button('View Reviews', 
              type='primary',
              use_container_width=True):
     st.switch_page('pages/Jennifer_Skills_Insights.py')
 
-if st.button # stub
+
 
 
