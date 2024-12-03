@@ -44,3 +44,8 @@ if st.button('Get a count for the number of co-ops for each student',
              type='primary',
              use_container_width=True):
   st.switch_page('pages/student/coop_count.py')
+
+if st.button('Hire a new data analyst',
+             type='primary',
+             use_container_width=True):
+    st.switch_page('pages/GHire_Analyst.py')
