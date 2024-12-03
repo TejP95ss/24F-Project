@@ -25,17 +25,6 @@ if st.button('Explore Skills Insights',
              use_container_width=True):
     st.switch_page('pages/Jennifer_Skills_Insights.py')
 
-if st.button('Manage Reviews for Co-op Positions',
-             type='primary',
-             use_container_width=True):
-    st.switch_page('pages/Jennifer_Review_Management.py')
+if st.button # stub
 
-if st.button('Analyze Company Satisfaction Ratings',
-             type='primary',
-             use_container_width=True):
-    st.switch_page('pages/Jennifer_Company_Satisfaction.py')
 
-if st.button('View Student Participation in Co-ops',
-             type='primary',
-             use_container_width=True):
-    st.switch_page('pages/Jennifer_Student_Participation.py')
