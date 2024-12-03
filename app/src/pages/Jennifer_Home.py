@@ -4,8 +4,7 @@ logger = logging.getLogger(__name__)
 import streamlit as st
 from modules.nav import SideBarLinks
 
-st.set_page_config(layout = 'wide')
-
+st.set_page_config(layout='wide')
 
 # Show appropriate sidebar links for the role of the currently logged in user
 SideBarLinks()
@@ -15,12 +14,17 @@ st.write('')
 st.write('')
 st.write('### What would you like to do today?')
 
-# Buttons for Jennifer's functionality pages
-if st.button("View Co-op Trends and Summary", type="primary", use_container_width=True):
-    st.switch_page("Jennifer_Coop_Trends")
+if st.button('Get Co-op Trends and Summary', 
+             type='primary',
+             use_container_width=True):
+    st.switch_page('pages/Jennifer_Coop_Trends.py')
 
-if st.button("Explore Skills Insights", type="primary", use_container_width=True):
-    st.switch_page("Jennifer_Skills_Insights")
+if st.button('Explore Skills Insights', 
+             type='primary',
+             use_container_width=True):
+    st.switch_page('pages/Jennifer_Skills_Insights.py')
 
-if st.button("Manage Tasks", type="primary", use_container_width=True):
-    st.switch_page("Jennifer_Task_Management")
+if st.button('Manage Tasks', 
+             type='primary',
+             use_container_width=True):
+    st.switch_page('pages/Jennifer_Task_Management.py')
