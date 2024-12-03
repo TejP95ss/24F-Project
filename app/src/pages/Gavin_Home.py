@@ -18,32 +18,32 @@ st.write('### What would you like to do today?')
 if st.button('Access List of Students Ready to Connect on Linkedin', 
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/Student_Connect.py')
+  st.switch_page('pages/GStudent_Connect.py')
 
 if st.button('Retrieve Total Number of Student Users',
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/current_users.py')
+  st.switch_page('pages/GCurrent_Users.py')
   
 if st.button('Reload a backup app into the log',
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/logs_backup.py')
+  st.switch_page('pages/GLogs_Backup.py')
 
 if st.button('Retrieve the last 10 submitted applications',
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/recent_applications.py')
+  st.switch_page('pages/GRecent_Applications.py')
 
 if st.button('Find all student IDs with a valid profile',
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/student/id/profile.py')
+  st.switch_page('pages/GStudent_Id_Profile.py')
 
 if st.button('Get a count for the number of co-ops for each student',
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/student/coop_count.py')
+  st.switch_page('pages/GStudent/Coop_Count.py')
 
 if st.button('Hire a new data analyst',
              type='primary',
