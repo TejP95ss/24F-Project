@@ -91,7 +91,21 @@ def delete_review(id):
 
 # Route to update an existing review
 @natasha.route('/review/<id>', methods=['PUT'])
-def update_review(id, text):
+def update_review(id):
+    review_data = request.json
+    text = review_data['review_text']
+
+    review_check_query = f'SELECT id FROM review WHERE id = {id}'
+    cursor = db.get_db().cursor()
+    cursor.execute(review_check_query)
+    review_exists = cursor.fetchone()
+
+    if not review_exists:
+        current_app.logger.error(f'No review found with ID: {id}')
+        response = make_response(jsonify({'error': f'No review found with ID: {id}'}))
+        response.status_code = 404
+        return response
+
     query = f''' 
         UPDATE review
         SET review_text = {text}
@@ -102,6 +116,6 @@ def update_review(id, text):
     cursor.execute(query)
     db.get_db().commit()
 
-    response = make_response("Review successfully updated")
+    response = make_response("Review text successfully updated")
     response.status_code = 200
     return response
