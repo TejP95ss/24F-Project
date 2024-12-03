@@ -18,7 +18,7 @@ st.write('### What would you like to do today?')
 if st.button('Create and Update Profile', 
              type='primary',
              use_container_width=True):
-    st.switch_page('_____')
+    st.switch_page('pages/Natasha_Profile_Updates.py')
 
 if st.button('Edit Your Reviews', 
              type='primary',
