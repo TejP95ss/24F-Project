@@ -100,3 +100,33 @@ def student_total_coops():
         LEFT JOIN student_coops sc ON s.id = sc.student_id
         GROUP BY s.id, s.username;
     '''
+
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    theData = cursor.fetchall()
+
+    response = make_response(jsonify(theData))
+    response.status_code = 200
+    return response
+
+# Adds a data analyst to the team (new hire)
+@gavin.route('/data_analyst', methods=['POST'])
+def hire_analyst():
+
+    analyst_data = request.json
+    email = analyst_data['email']
+    name = analyst_data['name']
+    role = analyst_data['role']
+
+    query = f'''
+        INSERT INTO data_analyst (email, name, role)
+        VALUES (%s, %s, %s)
+        '''
+    current_app.logger.info(f'Query: {query}')
+    cursor = db.get_db().cursor()
+    cursor.execute(query, (email, name, role))
+    db.get_db().commit()
+
+    response = make_response("User added successfully!")
+    response.status_code = 201
+    return response
