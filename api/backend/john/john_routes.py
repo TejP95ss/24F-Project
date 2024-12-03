@@ -16,6 +16,12 @@ def get_position_details(id):
     cursor.execute(query)
     position_details = cursor.fetchall()
 
+    if not position_details:
+        current_app.logger.error(f"No position found with ID: {id}")
+        response = make_response(jsonify({"error": f"No position found with ID: {id}"}))
+        response.status_code = 404
+        return response
+
     response = make_response(jsonify(position_details))
     response.status_code = 200
     return response
