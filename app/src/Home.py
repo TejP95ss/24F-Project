@@ -67,25 +67,19 @@ if st.button("Act as Gavin, a system administrator",
     logger.info("Logging in as System Administrator Gavin")
     st.switch_page('pages/Gavin_Home.py')
 
-if st.button('Act as Mohammad, an USAID worker', 
+if st.button('Act as Jennifer, a data analyst', 
             type = 'primary', 
             use_container_width=True):
     st.session_state['authenticated'] = True
-    st.session_state['role'] = 'usaid_worker'
-    st.session_state['first_name'] = 'Mohammad'
-    st.switch_page('pages/10_USAID_Worker_Home.py')
+    st.session_state['role'] = 'data_analyst'
+    st.session_state['first_name'] = 'Jennifer'
+    logger.info("Logging in as Data Analyst Jennifer")
+    st.switch_page('pages/Jennifer_Home.py')
 
-if st.button('Act as System Administrator', 
+if st.button('Act as Natasha, a Past Co-Op Student', 
             type = 'primary', 
             use_container_width=True):
     st.session_state['authenticated'] = True
-    st.session_state['role'] = 'administrator'
-    st.session_state['first_name'] = 'SysAdmin'
-    st.switch_page('pages/20_Admin_Home.py')
-
-if st.button('Some Text On the Button',
-             type = 'secondary',
-             use_container_width=True):
-    st.session_state['authenticated'] = True
-    st.session_state['role'] = 'Professor'
+    st.session_state['role'] = 'student'
+    st.session_state['first_name'] = 'Natasha'
     st.switch_page('pages/20_Admin_Home.py')
