@@ -510,7 +510,6 @@ VALUES (30, 1, 'Annual Recruitment Review', 'Engineering vs. Manufacturing', '20
 INSERT INTO reports (company_id, created_by, report_name, industry_compare, timestamp)
 VALUES (16, 29, 'Job Satisfaction Report', 'Retail vs. Biotech', '2024-09-22 13:09:51');
 
-
 INSERT INTO tasks (report_id, created_by, name, status, assigned_to, timestamp, description)
 VALUES (35, 30, 'Compile Quarterly Reports', 'In Progress', 24, '2024-03-02 19:32:47', 'Summarize co-op placement statistics by industry.');
 
@@ -591,11 +590,84 @@ INSERT INTO skill (name) VALUES ('Mobile App Development');
 INSERT INTO skill (name) VALUES ('Quality Assurance Testing');
 INSERT INTO skill (name) VALUES ('Digital Marketing');
 INSERT INTO skill (name) VALUES ('Supply Chain Management');
-INSERT INTO skill (name) VALUES ('Titration');
-INSERT INTO skill (name) VALUES ('Pipetting');
-INSERT INTO skill (name) VALUES ('Phlebotomy');
-INSERT INTO skill (name) VALUES ('Financial Analysis');
-INSERT INTO skill (name) VALUES ('Video Editing');
-INSERT INTO skill (name) VALUES ('Photography');
-INSERT INTO skill (name) VALUES ('Acting');
-INSERT INTO skill (name) VALUES ('Design');
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Technology', 'Python Programming, SQL Database Management, Cloud Computing', 'Excellent', 'Extremely Satisfied', 26);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Finance', 'Financial Modeling, Data Analysis, Project Management', 'Good', 'Satisfied', 39);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Healthcare', 'Phlebotomy, Technical Writing, Quality Assurance Testing', 'Excellent', 'Satisfied', 24);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Marketing', 'Digital Marketing, Public Speaking, Marketing Strategy', 'Good', 'Satisfied With Reservations', 9);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Education', 'Technical Writing, Team Leadership, Public Speaking', 'Satisfactory', 'Satisfied', 14);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Software Development', 'Web Development, Python Programming, Mobile App Development', 'Excellent', 'Extremely Satisfied', 35);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Cybersecurity', 'Network Security, Cloud Computing, Quality Assurance Testing', 'Good', 'Satisfied', 41);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Graphic Design', 'Graphic Design, Video Editing, Photography', 'Satisfactory', 'Satisfied', 8);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Marketing', 'Public Speaking, Marketing Strategy, Project Management', 'Good', 'Satisfied With Reservations', 20);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Information Technology', 'SQL Database Management, Time Management, Python Programming', 'Excellent', 'Extremely Satisfied', 28);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Chemical Engineering', 'Titration, Pipetting, Technical Writing', 'Good', 'Satisfied', 7);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Education', 'Team Leadership, Public Speaking, Time Management', 'Satisfactory', 'Satisfied', 12);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Finance', 'Financial Analysis, Project Management, Customer Service', 'Good', 'Satisfied', 36);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Healthcare', 'Phlebotomy, Customer Service, Technical Writing', 'Excellent', 'Extremely Satisfied', 19);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Supply Chain', 'Supply Chain Management, Data Analysis, Project Management', 'Good', 'Satisfied', 18);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Technology', 'Python Programming, Machine Learning, Web Development', 'Excellent', 'Extremely Satisfied', 2);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Creative Arts', 'Photography, Acting, Design', 'Satisfactory', 'Satisfied With Reservations', 6);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Cybersecurity', 'Network Security, Cloud Computing, Quality Assurance Testing', 'Excellent', 'Satisfied', 15);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Chemical Engineering', 'Titration, Pipetting, Technical Writing', 'Good', 'Satisfied', 3);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Education', 'Team Leadership, Public Speaking, Time Management', 'Satisfactory', 'Satisfied', 22);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Finance', 'Financial Analysis, Project Management, Customer Service', 'Good', 'Satisfied', 4);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Healthcare', 'Phlebotomy, Customer Service, Technical Writing', 'Excellent', 'Extremely Satisfied', 29);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Supply Chain', 'Supply Chain Management, Data Analysis, Project Management', 'Good', 'Satisfied', 1);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Creative Arts', 'Photography, Acting, Design', 'Satisfactory', 'Satisfied With Reservations', 11);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Technology', 'Python Programming, SQL Database Management, Machine Learning', 'Good', 'Satisfied', 5);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Engineering', 'Cloud Computing, Technical Writing, Data Analysis', 'Excellent', 'Extremely Satisfied', 13);
+
+INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
+VALUES ('Finance', 'Financial Analysis, SQL Database Management, Project Management', 'Good', 'Satisfied', 23);

@@ -153,7 +153,7 @@ CREATE TABLE trends
 (
     position_id integer AUTO_INCREMENT PRIMARY KEY,
     industry varchar(30),
-    skill_alignments varchar(40),
+    skill_alignments varchar(100),
     career_alignments varchar(40),
     satisfaction_alignments varchar(40),
     FOREIGN KEY (position_id) REFERENCES reports(id)
