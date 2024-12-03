@@ -73,7 +73,7 @@ def get_users():
     response.status_code = 200
     return response
 
-# Route to delete a review for a user
+# Route to delete a specific review
 @natasha.route('/review/<id>', methods=['DELETE'])
 def delete_review(id):
     query = f'''
@@ -86,5 +86,22 @@ def delete_review(id):
     db.get_db().commit()
 
     response = make_response("Review removed from site successfully")
+    response.status_code = 200
+    return response
+
+# Route to update an existing review
+@natasha.route('/review/<id>', methods=['PUT'])
+def update_review(id, text):
+    query = f''' 
+        UPDATE review
+        SET review_text = {text}
+        WHERE id = {id}
+        '''
+    current_app.logger.into(f'Query: {query}')
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    db.get_db().commit()
+
+    response = make_response("Review successfully updated")
     response.status_code = 200
     return response
