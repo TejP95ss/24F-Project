@@ -59,7 +59,7 @@ def add_user():
 
     query = f'''
         INSERT INTO student (username, profileType, openToConnect)
-        VALUES (%s, %s, %s)
+        VALUES ({username}, {profileType}, {openToConnect})
     '''
     current_app.logger.info(f'Query: {query}')
     cursor = db.get_db().cursor()
@@ -111,18 +111,18 @@ def delete_review(id):
 @natasha.route('/review/<id>', methods=['PUT'])
 def update_review(id):
     review_data = request.json
-    text = review_data['review_text']
+    rating = review_data['rating']
+    comments = review_data['review_text']
 
-    query = f''' 
+    query = f'''
         UPDATE review
-        SET review_text = {text}
+        SET rating = {rating}, review_text = '{comments}'
         WHERE id = {id}
         '''
     current_app.logger.info(f'Query: {query}')
     cursor = db.get_db().cursor()
     cursor.execute(query)
     db.get_db().commit()
-
-    response = make_response("Review text successfully updated")
+    response = make_response("Review successfully updated")
     response.status_code = 200
     return response
