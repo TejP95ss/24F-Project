@@ -12,7 +12,7 @@ if option == "Create Profile":
     connectButton = st.radio("You are Open to Connect with other students:", (True, False))
 
     if st.button("Create Profile"):
-        if username:
+        if username and profileType:
             data = {
                 "username": username,
                 "profileType": profileType,
