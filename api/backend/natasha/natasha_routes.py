@@ -61,14 +61,12 @@ def add_user():
     INSERT INTO student (username, profileType, openToConnect)
     VALUES (%s, %s, %s)
     '''
-    cursor.execute(query, (username, profileType, openToConnect))
-    current_app.logger.info(f'Query: {query}')
     cursor = db.get_db().cursor()
     cursor.execute(query, (username, profileType, openToConnect))
     db.get_db().commit()
 
     response = make_response("User added successfully!")
-    response.status_code = 201
+    response.status_code = 200
     return response
 
 # Route to edit user's connection preferences (Natasha's 4th story)
