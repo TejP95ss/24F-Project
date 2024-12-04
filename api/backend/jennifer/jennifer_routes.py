@@ -10,19 +10,22 @@ def get_aggregated_trends():
         SELECT industry, skill_alignments, career_alignments, satisfaction_alignments
         FROM trends
     '''
-    cursor = db.get_db().cursor(dictionary=True)  # Use dictionary=True for easy JSON conversion
-    current_app.logger.info(f'Executing query: {query}')
+    cursor = db.get_db().cursor(dictionary=True)
     try:
+        current_app.logger.info(f'Executing query: {query}')
         cursor.execute(query)
         trends = cursor.fetchall()
+        current_app.logger.info(f"Fetched trends: {trends}")  # Log the fetched trends
         if not trends:
             response = make_response(jsonify({"message": "No trends found"}), 404)
         else:
             response = make_response(jsonify(trends), 200)
     except Exception as e:
+        # Log detailed error message
         current_app.logger.error(f"Error fetching trends: {str(e)}")
-        response = make_response(jsonify({"error": "Failed to fetch trends"}), 500)
+        response = make_response(jsonify({"error": f"Failed to fetch trends: {str(e)}"}), 500)
     return response
+
 
 # Route to add a new trend (Jennifer's 2nd Story)
 @jennifer.route('/trends', methods=['POST'])
