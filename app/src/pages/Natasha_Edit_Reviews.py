@@ -13,7 +13,7 @@ if option == "Update Review":
     review_text = st.text_area("Update your review")
 
     if st.button("Update Review"):
-        if review_id and review_text:
+        if review_id:
             data = {
                 "rating": rating,
                 "review_text": review_text
