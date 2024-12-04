@@ -97,7 +97,7 @@ def update_connect(id):
 def delete_review(id):
     query = f'''
         DELETE FROM review
-        WHERE id = {id} 
+        WHERE id = %s
     '''
     current_app.logger.info(f'Query: {query}')
     cursor = db.get_db().cursor()
