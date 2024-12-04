@@ -62,13 +62,16 @@ CREATE TABLE skill
     name varchar(100)
 );
 
-CREATE TABLE review_skills
-(
-    review_id integer,
-    skill_id integer,
+CREATE TABLE IF NOT EXISTS review_skills (
+    review_id INTEGER NOT NULL,
+    skill_id INTEGER NOT NULL,
     PRIMARY KEY (review_id, skill_id),
-    FOREIGN KEY (review_id) REFERENCES review(id),
+    FOREIGN KEY (review_id) REFERENCES review(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
     FOREIGN KEY (skill_id) REFERENCES skill(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
 CREATE TABLE student_skills
