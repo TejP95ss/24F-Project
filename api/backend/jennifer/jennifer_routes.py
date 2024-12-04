@@ -83,7 +83,7 @@ def delete_trend(trend_id):
         response = make_response(jsonify({"error": "Failed to delete trend"}), 500)
     return response
 
-# Route to fetch reports assigned to data analysts (Jennifer's 5th Story)
+# Route to fetch reports assigned to co-op students (Jennifer's 5th Story)
 @jennifer.route('/reports', methods=['GET'])
 def get_reports():
     query = '''

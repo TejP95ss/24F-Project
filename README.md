@@ -62,6 +62,29 @@
 6. **Manage Submitted Reviews**
    - Remove any submitted review to ensure the quality of reviews on the platform
 
+### ** For Co-OP Advisorss**
+
+1. **View Aggregated Trends by Industry**
+  - Gain insights into industry-specific trends, including skill alignments, career alignments, and satisfaction alignments, to better understand the evolving needs of co-op placements.
+
+2. **Add New Trends**
+  - Input new trends into the system, ensuring the database reflects the latest information about industry expectations and skill demands.
+
+3. **Update Existing Trends**
+  - Modify existing trend data to keep it accurate and relevant, helping co-op seekers align their skills with industry needs.
+
+4. **Delete Trends**
+ - Remove outdated or irrelevant trends to maintain a streamlined and up-to-date trends database.
+ 
+5. **Fetch Reports Assigned to Data Analysts**
+  - Access reports created by data analysts, providing detailed comparisons of industries, co-op performance metrics, and other critical  data for advising co-op seekers.
+
+
+
+
+
+
+
 ### **Prerequisites**
 - Python (3.8 or higher)
 - Docker and Docker Compose
