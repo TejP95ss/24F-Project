@@ -38,10 +38,10 @@ def count_student_users():
     return response
 
 # Adds a backup application into the log
-@gavin.route('/logs_backup', methods=['PUT'])
-def load_backup_app():
+@gavin.route('/logs_backup/<app_id>', methods=['PUT'])
+def load_backup_app(app_id):
     query = f'''
-        INSERT INTO logs (app_id)
+        INSERT INTO logs {app_id}
         SELECT id 
         FROM applications
         WHERE version = 'backup';
