@@ -61,7 +61,7 @@ if st.button("Act as Gavin, a system administrator",
    logger.info("Logging in as System Administrator Gavin")
    st.switch_page('pages/Gavin_Home.py')
 
-if st.button('Act as Jennifer, a Co-Op Advisor', 
+if st.button('Act as Jennifer, a Co-Op Program Analyst', 
            type = 'primary', 
            use_container_width=True):
    st.session_state['authenticated'] = True
