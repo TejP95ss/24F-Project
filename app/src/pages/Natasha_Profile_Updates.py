@@ -18,7 +18,7 @@ if option == "Create Profile":
                 "profileType": profileType,
                 "openToConnect": openToConnect
             }
-            response = requests.post(f"http://web-api:4000/student/{id}", json=data)
+            response = requests.post(f"http://web-api:4000/student", json=data)
             if response.status_code == 200:
                 st.success("Profile created successfully!")
             else:
@@ -34,14 +34,12 @@ elif option == "Change Connect Preferences":
     connectButton = st.radio("Choose an option:", (True, False))
 
     if st.button("Update Profile"):
-        if connectButton:
+        if st_id and connectButton is not None:
             data = {
                 "openToConnect": connectButton
             }
-            response = requests.put(f"http://web-api:4000/student/{id}", json=data)
+            response = requests.put(f"http://web-api:4000/student/{st_id}", json=data)
             if response.status_code == 200:
                 st.success("Preferences updated successfully!")
             else:
                 st.error(f"Failed to update preferences. HTTP Status: {response.status_code}")
-        else:
-            st.warning("Please fill in all fields!")
