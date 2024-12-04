@@ -8,8 +8,8 @@ option = st.radio("What would you like to do?", ["Create Profile", "Change Conne
 if option == "Create Profile":
     st.header("Create Profile")
     username = st.text_input("Username: ")
-    profileType = st.radio("Choose an option:", ("Seeker", "Reviewer", "Both")) 
-    openToConnect = st.radio("Choose an option:", (True, False))
+    profileType = st.radio("What is your Co-op Status?:", ("Seeker", "Reviewer", "Both")) 
+    openToConnect = st.radio("You are Open to Connect with other students:", (True, False))
 
     if st.button("Create Profile"):
         if username and profileType and openToConnect:
