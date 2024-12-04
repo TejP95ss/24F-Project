@@ -111,18 +111,6 @@ def hire_analyst():
 # Removes the given review from the database
 @gavin.route('/review/<id>/remove', methods=['DELETE'])
 def delete_review(id):
-
-    check_review = f"SELECT id FROM review WHERE id = {id}"
-    cursor = db.get_db().cursor()
-    cursor.execute(check_review)
-    exists = cursor.fetchone()
-
-    if not exists:
-        current_app.logger.error(f"no review exists with associated id: {id}")
-        response = make_response(jsonify({"error": f"no review exists with associated id: {id}"}))
-        response.status_code = 404
-        return response   
-    
     query = f'''
         DELETE FROM review
         WHERE id = {id}
