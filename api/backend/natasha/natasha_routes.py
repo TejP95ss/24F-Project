@@ -7,7 +7,7 @@ natasha = Blueprint('natasha', __name__)
 @natasha.route('/position/<position_id>/review', methods=['GET'])
 def find_position_reviews(position_id):
     query = f'''
-        SELECT r.id, p.title, r.rating, r.review_text
+        SELECT r.id, r.rating, r.review_text
         FROM review r
         JOIN coop_position p ON r.position_id = p.id
         WHERE r.position_id = {position_id}

@@ -16,16 +16,14 @@ if st.button("Fetch Reviews"):
             
             if response.status_code == 200:
                 # Parse the JSON response
-                position_details = response.json()
+                review_details = response.json()
                 
-                if position_details:
+                if review_details:
                     # Display the details in a readable format
-                    st.subheader("Position Details")
-                    st.write(f"**Title:** {position_details[0]['title']}")
-                    st.write(f"**Company ID:** {position_details[0]['company_id']}")
-                    st.write(f"**Hourly Wage:** ${position_details[0]['hourly_wage']}/hr")
-                    st.write(f"**Workload:** {position_details[0]['workload']} hours/week")
-                    st.write(f"**Description:** {position_details[0]['description']}")
+                    st.subheader("Review")
+                    st.write(f"**Review ID:** {review_details[0]['id']}")
+                    st.write(f"**Rating:** {review_details[0]['rating']}")
+                    st.write(f"**Review:** {review_details[0]['review_text']}")
                 else:
                     st.error("No details found for the given ID.")
             else:
