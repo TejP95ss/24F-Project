@@ -9,17 +9,17 @@ if option == "Create Profile":
     st.header("Create Profile")
     username = st.text_input("Username: ")
     profileType = st.text_input("What is your Co-op Status?") 
-    openToConnect = st.radio("You are Open to Connect with other students:", (True, False))
+    connectButton = st.radio("You are Open to Connect with other students:", (True, False))
 
     if st.button("Create Profile"):
         if username:
             data = {
                 "username": username,
                 "profileType": profileType,
-                "openToConnect": openToConnect
+                "openToConnect": connectButton
             }
             response = requests.post(f"http://web-api:4000/student", json=data)
-            if response.status_code == 200:
+            if response.status_code == 201:
                 st.success("Profile created successfully!")
             else:
                 st.error(f"Failed to create profile. HTTP Status: {response.status_code}")
