@@ -17,7 +17,7 @@ st.markdown (
 
     Gavin, a system administrator, who can perform various management tasks to keep the platform running smoothly 
 
-    Jennifer, a data analyst who can modify and view site statistics to monitor student and co-op trends 
+    Jennifer, a co-op program analyst who can modify and view site statistics to monitor student and co-op trends 
 
     John, a first time co-op seeker who is using the platform to help him determine which companies he wants to apply to 
 
