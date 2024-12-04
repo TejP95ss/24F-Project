@@ -28,8 +28,3 @@ if st.button('View Reports',
              type='primary',
              use_container_width=True):
     st.switch_page('pages/33_View_Reports.py')
-
-if st.button('See All Students Open To Connect', 
-             type='primary',
-             use_container_width=True):
-    st.switch_page('pages/34_Open_To_Connect.py')
