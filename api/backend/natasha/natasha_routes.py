@@ -57,10 +57,11 @@ def add_user():
     profileType = user_data['profileType']
     openToConnect = user_data['openToConnect']
 
-    query = f'''
-        INSERT INTO student (username, profileType, openToConnect)
-        VALUES ({username}, {profileType}, {openToConnect})
+    query = '''
+    INSERT INTO student (username, profileType, openToConnect)
+    VALUES (%s, %s, %s)
     '''
+    cursor.execute(query, (username, profileType, openToConnect))
     current_app.logger.info(f'Query: {query}')
     cursor = db.get_db().cursor()
     cursor.execute(query, (username, profileType, openToConnect))

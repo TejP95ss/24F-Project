@@ -34,7 +34,7 @@ elif option == "Change Connect Preferences":
     connectButton = st.radio("Choose an option:", (True, False))
 
     if st.button("Update Profile"):
-        if connectButton:
+        if st_id and connectButton is not None:
             data = {
                 "openToConnect": connectButton
             }
@@ -43,5 +43,3 @@ elif option == "Change Connect Preferences":
                 st.success("Preferences updated successfully!")
             else:
                 st.error(f"Failed to update preferences. HTTP Status: {response.status_code}")
-        else:
-            st.warning("Please fill in all fields!")
