@@ -122,6 +122,7 @@ def update_linkedin_url(id):
         response = make_response(jsonify({"error": "Failed to update LinkedIn URL"}), 500)
     return response
 
+# gets a list of students who are open to connect.
 @john.route('/students/open_to_connect', methods=['GET'])
 def get_students_open_to_connect():
     query = """
