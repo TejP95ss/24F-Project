@@ -31,12 +31,12 @@ elif option == "Change Connect Preferences":
     st.header("Change Your Connection Preferences")
 
     st_id = st.text_input("Student ID: ")
-    openToConnect = st.radio("Choose an option:", (True, False))
+    connectButton = st.radio("Choose an option:", (True, False))
 
     if st.button("Update Profile"):
-        if openToConnect:
+        if connectButton:
             data = {
-                "openToConnect": openToConnect
+                "openToConnect": connectButton
             }
             response = requests.put(f"http://web-api:4000/student/{id}", json=data)
             if response.status_code == 200:
