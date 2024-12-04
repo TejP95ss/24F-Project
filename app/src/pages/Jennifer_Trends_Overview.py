@@ -6,7 +6,7 @@ st.title("Trends Overview")
 # Fetch and display aggregated trends
 if st.button("Fetch Aggregated Trends"):
     try:
-        url = "http://web-api:4000/trends"
+        url = "http://web-api:4000/trends"  # Correct endpoint URL
         response = requests.get(url)
         if response.status_code == 200:
             trends = response.json()
