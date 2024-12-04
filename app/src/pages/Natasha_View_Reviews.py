@@ -22,9 +22,9 @@ if st.button("Fetch Reviews"):
                     # Display the details in a readable format
                     for review in review_details:
                         st.subheader("Review")
-                        st.write(f"**Review ID:** {review_details[0]['id']}")
-                        st.write(f"**Rating:** {review_details[0]['rating']}")
-                        st.write(f"**Review:** {review_details[0]['review_text']}")
+                        st.write(f"**Review ID:** {review['id']}")
+                        st.write(f"**Rating:** {review['rating']}")
+                        st.write(f"**Review:** {review['review_text']}")
                 else:
                     st.error("No details found for the given ID.")
             else:
