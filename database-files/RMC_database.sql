@@ -140,13 +140,16 @@ CREATE TABLE reports
     FOREIGN KEY (created_by) REFERENCES data_analyst(id)
 );
 
-CREATE TABLE task_reports
-(
-    task_id integer,
-    report_id integer,
+CREATE TABLE task_reports (
+    task_id   INTEGER NOT NULL,
+    report_id INTEGER NOT NULL,
     PRIMARY KEY (task_id, report_id),
-    FOREIGN KEY (task_id) REFERENCES tasks(id),
-    FOREIGN KEY (report_id) REFERENCES reports(id)
+    FOREIGN KEY (task_id) REFERENCES tasks(id) 
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE,
+    FOREIGN KEY (report_id) REFERENCES reports(id) 
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
 );
 
 CREATE TABLE trends
