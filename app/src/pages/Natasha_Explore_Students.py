@@ -18,20 +18,8 @@ if option == "Fetch Student List":
             if response.status_code == 200:
                 # Parse the JSON response
                 student_details = response.json()
-                
-                if student_details:
-                    # Display the details in a readable format
-                    
-                    st.subheader("Student Details")
-                    for student in student_details:
-                        st.write(f"**Username:** {student_details[0]['username']}")
-                        st.write(f"**ID:** {student_details[0]['id']}")
-                        willing_to_connect = "Yes" if student_details[0]['openToConnect'] else "No"
-                        st.write(f"**Willing to Connect?:** {willing_to_connect}")
-                        st.write(f"**LinkedIn:** {student_details[0]['linkedin']}")
-                        st.write(f"**Major:** {student_details[0]['major']}")
-                else:
-                    st.error("An Error Occurred.")
+                st.dataframe(student_details)
+
             else:
                 st.error(f"Failed to fetch details. HTTP Status Code: {response}")
         except Exception as e:

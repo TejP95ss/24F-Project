@@ -25,9 +25,10 @@ def find_student(id):
     query = f'''
         SELECT id, username, openToConnect, linkedin, major
         FROM student
+        WHERE id = %s
     '''
     cursor = db.get_db().cursor()
-    cursor.execute(query)
+    cursor.execute(query, (id,))
     theData = cursor.fetchall()
 
     response = make_response(jsonify(theData))
@@ -79,12 +80,12 @@ def update_connect(id):
     query = f'''
         UPDATE student
         SET openToConnect = {connect}
-        WHERE id = {id}
+        WHERE id = %s
         '''
         
     current_app.logger.info(f'Query: {query}')
     cursor = db.get_db().cursor()
-    cursor.execute(query)
+    cursor.execute(query, (id,))
     db.get_db().commit()
 
     response = make_response("Connection preferences successfully updated")
