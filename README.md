@@ -48,6 +48,20 @@
 
 ---
 
+### ** For System Administrators**
+1. **Access Student Data**
+   - Retrieve the IDs for every student using the platform
+2. **Access Connecting Students**
+   - Retrieve information for students looking to connect on Linkedin
+3. **Co-op Details**
+   - Get the total number of co-ops active students have participated in
+4. **Manage Backup Data**
+   - Manually reload a previous version of the application
+5. **Process New Hires**
+   - Add newly hired analysts and their information into the system
+6. **Manage Submitted Reviews**
+   - Remove any submitted review to ensure the quality of reviews on the platform
+
 ### **Prerequisites**
 - Python (3.8 or higher)
 - Docker and Docker Compose
