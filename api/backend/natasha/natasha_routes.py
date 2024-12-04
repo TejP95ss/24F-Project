@@ -21,8 +21,8 @@ def find_position_reviews(position_id):
     return response
 
 # Returns a specific co-op student (Natasha's 2nd story)
-@natasha.route('/user/<id>', methods=['GET'])
-def find_user(id):
+@natasha.route('/student/<id>', methods=['GET'])
+def find_student(id):
     query = f'''
         SELECT id, username, openToConnect, linkedin, major
         FROM student
@@ -36,7 +36,7 @@ def find_user(id):
     return response
 
 # Returns a list of co op students (Natasha's 2nd story)
-@natasha.route('/id', methods=['GET'])
+@natasha.route('/student', methods=['GET'])
 def get_users():
     query = f'''
         SELECT id, username, openToConnect, linkedin, major
@@ -51,7 +51,7 @@ def get_users():
     return response
 
 # Adds a user profile and contact information (Natasha's 3rd story)
-@natasha.route('/user', methods=['POST'])
+@natasha.route('/student', methods=['POST'])
 def add_user():
     user_data = request.json
     username = user_data['username']
@@ -72,10 +72,10 @@ def add_user():
     return response
 
 # Route to make a user not open to connect (Natasha's 4th story)
-@natasha.route('/user/<id>', methods = ['PUT'])
+@natasha.route('/student/<id>', methods = ['PUT'])
 def update_connect(id):
-    user_data = request.json
-    connect = user_data['openToConnect']
+    student_data = request.json
+    connect = student_data_data['openToConnect']
 
     query = f'''
         UPDATE student

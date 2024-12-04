@@ -18,8 +18,8 @@ if option == "Create Profile":
                 "profileType": profileType,
                 "openToConnect": openToConnect
             }
-            response = requests.post(f"http://api:4000/students/{id}", json=data)
-            if response.status_code == 201:
+            response = requests.post(f"http://web-api:4000/student/{id}", json=data)
+            if response.status_code == 200:
                 st.success("Profile created successfully!")
             else:
                 st.error(f"Failed to create profile. HTTP Status: {response.status_code}")
@@ -36,7 +36,7 @@ elif option == "Change Connect Preferences":
             data = {
                 "openToConnect": openToConnect
             }
-            response = requests.put(f"http://web-api:4000/user/{id}", json=data)
+            response = requests.put(f"http://web-api:4000/student/{id}", json=data)
             if response.status_code == 200:
                 st.success("Preferences updated successfully!")
             else:
