@@ -4,7 +4,7 @@ from backend.db_connection import db
 natasha = Blueprint('natasha', __name__)
 
 # Gets all reviews for a specific position id (Natasha's 1st story)
-@natasha.route('/position/<position_id>/review', methods=['GET'])
+@natasha.route('/review/positions/<position_id>', methods=['GET'])
 def find_position_reviews(position_id):
     query = f'''
         SELECT r.id, r.rating, r.review_text
@@ -36,7 +36,7 @@ def find_user(id):
     return response
 
 # Returns a list of co op students (Natasha's 2nd story)
-@natasha.route('/user/', methods=['GET'])
+@natasha.route('/user', methods=['GET'])
 def get_users():
     query = f'''
         SELECT id, username, openToConnect, linkedin, major
@@ -51,7 +51,7 @@ def get_users():
     return response
 
 # Adds a user profile and contact information (Natasha's 3rd story)
-@natasha.route('/user/', methods=['POST'])
+@natasha.route('/user', methods=['POST'])
 def add_user():
     user_data = request.json
     username = user_data['username']
