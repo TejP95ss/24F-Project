@@ -13,12 +13,12 @@ if option == "Update Review":
     review_text = st.text_area("Add Updated Review")
 
     if st.button("Update Review"):
-        if review_id and review_text:
+        if id and review_text:
             data = {
                 "rating": rating,
                 "review_text": review_text
             }
-            response = requests.put(f"http://web-api:4000/review/{review_id}", json=data)
+            response = requests.put(f"http://web-api:4000/review/{id}", json=data)
             if response.status_code == 200:
                 st.success("Review updated successfully!")
             else:
@@ -29,7 +29,7 @@ if option == "Update Review":
 # Delete Review
     elif option == "Delete Your Review":
         st.header("Delete Review")
-        id = st.text_input("Review ID", key="remove_review_id")
+        id = st.text_input("Review ID:", key="remove_review_id")
 
         if st.button("Delete Review"):
             if id:
