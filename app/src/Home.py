@@ -52,7 +52,7 @@ if st.button("Act as John, a First Time Coop Seeker",
    st.switch_page('pages/John_Home.py')
 
 
-if st.button("Act as Gavin, a system administrator",
+if st.button("Act as Gavin, a System Administrator",
             type = 'primary',
             use_container_width=True):
    st.session_state['authenticated'] = True
