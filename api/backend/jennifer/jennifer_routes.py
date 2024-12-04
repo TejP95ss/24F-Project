@@ -10,7 +10,7 @@ def get_aggregated_trends():
         SELECT industry, skill_alignments, career_alignments, satisfaction_alignments
         FROM trends
     '''
-    cursor = db.get_db().cursor(dictionary=True)
+    cursor = db.get_db().cursor()
     current_app.logger.info(f'Executing query: {query}')
     try:
         cursor.execute(query)
