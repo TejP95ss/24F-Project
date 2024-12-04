@@ -41,7 +41,7 @@ def find_user(id):
 @natasha.route('/user/', methods=['GET'])
 def get_users():
     query = f'''
-        SELECT username, openToConnect, linkedin, major
+        SELECT id, username, openToConnect, linkedin, major
         FROM student 
     '''
     cursor = db.get_db().cursor()
