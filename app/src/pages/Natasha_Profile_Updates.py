@@ -18,7 +18,7 @@ if option == "Create Profile":
                 "profileType": profileType,
                 "openToConnect": openToConnect
             }
-            response = requests.post(f"http://web-api:4000/students/{id}", json=data)
+            response = requests.post(f"http://api:4000/students/{id}", json=data)
             if response.status_code == 201:
                 st.success("Profile created successfully!")
             else:
