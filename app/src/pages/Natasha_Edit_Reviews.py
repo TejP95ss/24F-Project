@@ -5,14 +5,12 @@ st.title("Edit Your Review")
 
 option = st.radio("What would you like to do?", ["Update Review", "Delete Review"])
 
-# Update Existing Review --> should I delete this? 
-# it's a user story, but already there in John's portion. 
-# and I already have a put method
+# Update Existing Review 
 if option == "Update Review":
     st.header("Update Your Review")
     review_id = st.text_input("Review ID")
     rating = st.slider("New Rating (1-5)", 1, 5, 3)
-    review_text = st.text_area("Update your review")
+    review_text = st.text_area("Add Updated Review")
 
     if st.button("Update Review"):
         if review_id and review_text:
