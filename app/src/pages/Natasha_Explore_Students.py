@@ -3,9 +3,10 @@ import requests
 from modules.nav import SideBarLinks
 
 # Title of the Page
-st.title("Explore Our Student Database")
+st.title("Explore Student Database")
 option = st.radio("What would you like to do?", ["Fetch Student List", "Find Specific Student"])
 
+# Fetch List of All Students
 if option == "Fetch Student List":
     st.header("Fetch Student List")
 
@@ -33,7 +34,7 @@ if option == "Fetch Student List":
         except Exception as e:
             st.error(f"An error occurred: {e}")
 
-# Update Profile
+# Fetch List of a Specific Student using their ID
 elif option == "Find Specific Student":
     st.header("Find Specific Student")
     id = st.text_input("Enter a Student ID:", "")
