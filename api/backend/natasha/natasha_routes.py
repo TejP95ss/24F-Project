@@ -71,15 +71,15 @@ def add_user():
     response.status_code = 201
     return response
 
-# Route to make a user not open to connect (Natasha's 4th story)
+# Route to edit user's connection preferences (Natasha's 4th story)
 @natasha.route('/student/<id>', methods = ['PUT'])
 def update_connect(id):
-    student_data = request.json
-    connect = student_data_data['openToConnect']
+    input = request.json
+    connect = input['openToConnect']
 
     query = f'''
         UPDATE student
-        SET openToConnect = false
+        SET openToConnect = {connect}
         WHERE id = {id}
         '''
         
@@ -97,7 +97,7 @@ def update_connect(id):
 def delete_review(id):
     query = f'''
         DELETE FROM review
-        WHERE id = %s
+        WHERE id = {id}
     '''
     current_app.logger.info(f'Query: {query}')
     cursor = db.get_db().cursor()

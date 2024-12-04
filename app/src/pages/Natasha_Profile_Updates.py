@@ -29,6 +29,8 @@ if option == "Create Profile":
 # Update whether user is open to connect in profile
 elif option == "Change Connect Preferences":
     st.header("Change Your Connection Preferences")
+
+    st_id = st.text_input("Student ID: ")
     openToConnect = st.radio("Choose an option:", (True, False))
 
     if st.button("Update Profile"):
@@ -42,4 +44,4 @@ elif option == "Change Connect Preferences":
             else:
                 st.error(f"Failed to update preferences. HTTP Status: {response.status_code}")
         else:
-            st.warning("Please fill all fields!")
+            st.warning("Please fill in all fields!")
