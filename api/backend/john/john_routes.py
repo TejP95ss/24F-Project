@@ -90,3 +90,45 @@ def delete_user_skill(id):
     response = make_response("Skill removed from user's profile successfully")
     response.status_code = 200
     return response
+
+# Updates the linkedin URL for the student's profile
+@john.route('/user/<id>/linkedin', methods=['PUT'])
+def update_linkedin_url(id):
+    data = request.json
+
+    linkedin_url = data['linkedin']
+
+    query = f"UPDATE student SET linkedin = '{linkedin_url}' WHERE id = {id}"
+
+    cursor = db.get_db().cursor()
+    try:
+        cursor.execute(query)
+        db.get_db().commit()
+
+        response = make_response("LinkedIn URL updated successfully")
+        response.status_code = 200
+    except Exception as e:
+        current_app.logger.error(f"Error updating LinkedIn URL: {str(e)}")
+        response = make_response(jsonify({"error": "Failed to update LinkedIn URL"}), 500)
+    return response
+
+@john.route('/students/open_to_connect', methods=['GET'])
+def get_students_open_to_connect():
+    query = """
+        SELECT id, name, linkedin
+        FROM student
+        WHERE openToConnect = 1
+    """
+    cursor = db.get_db().cursor()
+    try:
+        cursor.execute(query)
+        students = cursor.fetchall()
+        if not students:
+            response = make_response(jsonify({"message": "No students found who are open to connect"}), 404)
+            return response
+        response = make_response(jsonify(students))
+        response.status_code = 200
+    except Exception as e:
+        current_app.logger.error(f"Error fetching students open to connect: {str(e)}")
+        response = make_response(jsonify({"error": "Failed to fetch students"}), 500)
+    return response
