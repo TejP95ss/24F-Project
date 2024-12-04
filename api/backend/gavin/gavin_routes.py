@@ -111,7 +111,6 @@ def hire_analyst():
 # Removes the given review from the database
 @gavin.route('/review/<id>/remove', methods=['DELETE'])
 def delete_review(id):
-    review_data = request.json
 
     check_review = f"SELECT id FROM review WHERE id = {id}"
     cursor = db.get_db().cursor()
