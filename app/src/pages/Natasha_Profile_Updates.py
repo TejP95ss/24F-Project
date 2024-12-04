@@ -19,7 +19,7 @@ if option == "Create Profile":
                 "openToConnect": connectButton
             }
             response = requests.post(f"http://web-api:4000/student", json=data)
-            if response.status_code == 200:
+            if response.status_code == 201:
                 st.success("Profile created successfully!")
             else:
                 st.error(f"Failed to create profile. HTTP Status: {response.status_code}")
