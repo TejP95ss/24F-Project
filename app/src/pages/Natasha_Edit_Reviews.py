@@ -18,7 +18,7 @@ if option == "Update Review":
                 "rating": rating,
                 "review_text": review_text
             }
-            response = requests.put(f"http://web-api:4000/reviews/{review_id}", json=data)
+            response = requests.put(f"http://web-api:4000/review/{review_id}", json=data)
             if response.status_code == 200:
                 st.success("Review updated successfully!")
             else:
@@ -27,19 +27,19 @@ if option == "Update Review":
             st.warning("Please fill all fields!")
 
 # Delete Review
-elif option == "Delete Your Review":
-    st.header("Delete Review")
-    review_id = st.text_input("Review ID", key="remove_review_id")
+    elif option == "Delete Your Review":
+        st.header("Delete Review")
+        id = st.text_input("Review ID", key="remove_review_id")
 
-    if st.button("Remove Skill"):
-        if review_id:
-            data = {
-                "review_id": review_id
-            }
-            response = requests.delete(f"http://web-api:4000/user/{review_id}", json=data)
-            if response.status_code == 200:
-                st.success("Review removed from user's profile successfully!")
+        if st.button("Delete Review"):
+            if id:
+                data = {
+                    "review_id": id
+                }
+                response = requests.delete(f"http://web-api:4000/review/{id}", json=data)
+                if response.status_code == 200:
+                    st.success("Review removed from user's profile successfully!")
+                else:
+                    st.error(f"Failed to remove review. HTTP Status: {response.status_code}")
             else:
-                st.error(f"Failed to remove review. HTTP Status: {response.status_code}")
-        else:
-            st.warning("Please provide both Review ID!")
+                st.warning("Please provide both Review ID!")
