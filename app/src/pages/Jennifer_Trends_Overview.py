@@ -3,6 +3,7 @@ import requests
 
 st.title("Trends Overview")
 
+# Fetch and display aggregated trends
 if st.button("Fetch Aggregated Trends"):
     try:
         url = "http://web-api:4000/trends"
@@ -20,7 +21,7 @@ if st.button("Fetch Aggregated Trends"):
                     st.write(f"  **Satisfaction Alignments**: {trend['satisfaction_alignments']}")
                     st.write("---")
         elif response.status_code == 404:
-            st.warning("No trends found.")
+            st.warning("No trends found in the database.")
         else:
             st.error(f"Failed to fetch data. HTTP Status Code: {response.status_code}")
     except requests.exceptions.RequestException as e:
