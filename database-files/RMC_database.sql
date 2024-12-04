@@ -4,7 +4,7 @@ CREATE DATABASE IF NOT EXISTS RMCDatabase;
 
 USE RMCDatabase;
 
-CREATE TABLE student
+CREATE TABLE IF NOT EXISTS student
 (
     id          integer AUTO_INCREMENT PRIMARY KEY,
     full_name varchar(30),
@@ -16,50 +16,60 @@ CREATE TABLE student
     linkedin varchar(40)
 );
 
-CREATE TABLE company
+CREATE TABLE IF NOT EXISTS company
 (
     id integer AUTO_INCREMENT PRIMARY KEY,
     industry varchar(30),
     name varchar(20)
 );
 
-CREATE TABLE coop_position
-(
-    id integer AUTO_INCREMENT PRIMARY KEY,
-    company_id integer,
-    industry varchar(25),
-    workload varchar(25),
-    hourly_wage decimal(4, 2),
-    title varchar(50),
-    avg_rating decimal(2, 1),
-    description varchar(5000),
+CREATE TABLE IF NOT EXISTS coop_position (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    company_id INTEGER,
+    industry VARCHAR(25),
+    workload VARCHAR(25),
+    hourly_wage DECIMAL(4, 2),
+    title VARCHAR(50),
+    avg_rating DECIMAL(2, 1),
+    description VARCHAR(5000),
     FOREIGN KEY (company_id) REFERENCES company(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
-CREATE TABLE student_coops
-(
-    student_id integer,
-    coop_id integer,
+
+CREATE TABLE IF NOT EXISTS student_coops (
+    student_id INTEGER,
+    coop_id INTEGER,
     PRIMARY KEY (student_id, coop_id),
-    FOREIGN KEY (student_id) REFERENCES student(id),
+    FOREIGN KEY (student_id) REFERENCES student(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
     FOREIGN KEY (coop_id) REFERENCES coop_position(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
-CREATE TABLE review
-(
-    id integer AUTO_INCREMENT PRIMARY KEY,
-    student_id integer,
-    review_text varchar(255),
-    rating decimal(2, 1),
-    position_id int,
-    FOREIGN KEY (student_id) REFERENCES student(id),
+
+CREATE TABLE IF NOT EXISTS review (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    student_id INTEGER,
+    review_text VARCHAR(255),
+    rating DECIMAL(2, 1),
+    position_id INTEGER,
+    FOREIGN KEY (student_id) REFERENCES student(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
     FOREIGN KEY (position_id) REFERENCES coop_position(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
-CREATE TABLE skill
+
+CREATE TABLE IF NOT EXISTS skill
 (
     id integer AUTO_INCREMENT PRIMARY KEY,
-    name varchar(100)
+    name varchar(50)
 );
 
 CREATE TABLE IF NOT EXISTS review_skills (
@@ -74,16 +84,21 @@ CREATE TABLE IF NOT EXISTS review_skills (
         ON UPDATE CASCADE
 );
 
-CREATE TABLE student_skills
-(
-    student_id integer,
-    skill_id integer,
+
+CREATE TABLE IF NOT EXISTS student_skills (
+    student_id INTEGER,
+    skill_id INTEGER,
     PRIMARY KEY (student_id, skill_id),
-    FOREIGN KEY (student_id) REFERENCES student(id),
+    FOREIGN KEY (student_id) REFERENCES student(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
     FOREIGN KEY (skill_id) REFERENCES skill(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
-CREATE TABLE admin
+
+CREATE TABLE IF NOT EXISTS admin
 (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     name varchar(25),
@@ -91,25 +106,29 @@ CREATE TABLE admin
     email varchar(35)
 );
 
-CREATE TABLE applications
-(
-    id integer AUTO_INCREMENT PRIMARY KEY,
-    admin_id integer,
-    version varchar(25),
-    description varchar(200),
-    name varchar(40),
+CREATE TABLE IF NOT EXISTS applications (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    admin_id INTEGER,
+    version VARCHAR(25),
+    description VARCHAR(200),
+    name VARCHAR(40),
     FOREIGN KEY (admin_id) REFERENCES admin(id)
+        ON DELETE SET NULL
+        ON UPDATE CASCADE
 );
 
-CREATE TABLE logs
-(
-    id integer AUTO_INCREMENT PRIMARY KEY,
-    app_id integer,
-    timestamp datetime DEFAULT CURRENT_TIMESTAMP,
+
+CREATE TABLE IF NOT EXISTS logs (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    app_id INTEGER,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (app_id) REFERENCES applications(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
 
-CREATE TABLE data_analyst
+
+CREATE TABLE IF NOT EXISTS data_analyst
 (
     id integer AUTO_INCREMENT PRIMARY KEY,
     email varchar(25),
@@ -117,50 +136,64 @@ CREATE TABLE data_analyst
     role varchar(40)
 );
 
-CREATE TABLE tasks
-(
-    id integer AUTO_INCREMENT PRIMARY KEY,
-    report_id integer,
-    created_by integer,
-    name varchar(40),
-    status varchar(15),
-    assigned_to integer,
-    timestamp datetime DEFAULT CURRENT_TIMESTAMP,
-    description varchar(200),
-    FOREIGN KEY (created_by) REFERENCES admin(id),
-    FOREIGN KEY (assigned_to) REFERENCES data_analyst(id)
-);
-
-CREATE TABLE reports
-(
-    id integer AUTO_INCREMENT PRIMARY KEY,
-    company_id integer,
-    created_by integer,
-    report_name varchar(50),
-    industry_compare varchar(50),
-    timestamp datetime DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (company_id) REFERENCES company(id),
-    FOREIGN KEY (created_by) REFERENCES data_analyst(id)
-);
-
-CREATE TABLE task_reports (
-    task_id   INTEGER NOT NULL,
-    report_id INTEGER NOT NULL,
-    PRIMARY KEY (task_id, report_id),
-    FOREIGN KEY (task_id) REFERENCES tasks(id) 
-        ON DELETE CASCADE 
+CREATE TABLE IF NOT EXISTS tasks (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    report_id INTEGER,
+    created_by INTEGER,
+    name VARCHAR(40),
+    status VARCHAR(15),
+    assigned_to INTEGER,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    description VARCHAR(200),
+    FOREIGN KEY (created_by) REFERENCES admin(id)
+        ON DELETE SET NULL
         ON UPDATE CASCADE,
-    FOREIGN KEY (report_id) REFERENCES reports(id) 
-        ON DELETE CASCADE 
+    FOREIGN KEY (assigned_to) REFERENCES data_analyst(id)
+        ON DELETE SET NULL
+        ON UPDATE CASCADE,
+    FOREIGN KEY (report_id) REFERENCES reports(id)
+        ON DELETE CASCADE
         ON UPDATE CASCADE
 );
 
-CREATE TABLE trends
-(
-    position_id integer AUTO_INCREMENT PRIMARY KEY,
-    industry varchar(30),
-    skill_alignments varchar(100),
-    career_alignments varchar(40),
-    satisfaction_alignments varchar(40),
+
+CREATE TABLE IF NOT EXISTS reports (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    company_id INTEGER,
+    created_by INTEGER,
+    report_name VARCHAR(50),
+    industry_compare VARCHAR(50),
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (company_id) REFERENCES company(id)
+        ON DELETE SET NULL
+        ON UPDATE CASCADE,
+    FOREIGN KEY (created_by) REFERENCES data_analyst(id)
+        ON DELETE SET NULL
+        ON UPDATE CASCADE
+);
+
+
+CREATE TABLE IF NOT EXISTS task_reports (
+    task_id   INTEGER NOT NULL,
+    report_id INTEGER NOT NULL,
+    PRIMARY KEY (task_id, report_id),
+    FOREIGN KEY (task_id) REFERENCES tasks(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (report_id) REFERENCES reports(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+
+CREATE TABLE IF NOT EXISTS trends (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    position_id INTEGER,
+    industry VARCHAR(30),
+    skill_alignments VARCHAR(100),
+    career_alignments VARCHAR(40),
+    satisfaction_alignments VARCHAR(40),
     FOREIGN KEY (position_id) REFERENCES reports(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 );
