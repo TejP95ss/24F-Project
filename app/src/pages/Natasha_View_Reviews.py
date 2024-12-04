@@ -7,7 +7,7 @@ st.title("View Reviews")
 # Input for Co-op Position ID
 position_id = st.text_input("Enter the Co-op Position ID:", "")
 
-# Fetch Details Button
+# Fetch Reviews Button
 if st.button("Fetch Reviews"):
     if position_id:
         try:

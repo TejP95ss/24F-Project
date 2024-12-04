@@ -34,7 +34,7 @@ if option == "Fetch Student List":
         except Exception as e:
             st.error(f"An error occurred: {e}")
 
-# Fetch List of a Specific Student using their ID
+# Fetch List of a specific student using their ID
 elif option == "Find Specific Student":
     st.header("Find Specific Student")
     id = st.text_input("Enter a Student ID:", "")

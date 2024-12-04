@@ -26,7 +26,7 @@ if option == "Create Profile":
         else:
             st.warning("Please fill all fields!")
 
-# Update Profile
+# Update whether user is open to connect in profile
 elif option == "Change Connect Preferences":
     st.header("Change Your Connection Preferences")
     openToConnect = st.radio("Choose an option:", (True, False))

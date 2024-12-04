@@ -28,7 +28,7 @@ if option == "Update Review":
         else:
             st.warning("Please fill all fields!")
 
-# Remove Skill from User Profile
+# Delete Review
 elif option == "Delete Your Review":
     st.header("Delete Review")
     review_id = st.text_input("Review ID", key="remove_review_id")
