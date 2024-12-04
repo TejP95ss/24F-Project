@@ -671,3 +671,124 @@ VALUES ('Engineering', 'Cloud Computing, Technical Writing, Data Analysis', 'Exc
 
 INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
 VALUES ('Finance', 'Financial Analysis, SQL Database Management, Project Management', 'Good', 'Satisfied', 23);
+
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (1, 'I learned how to manage large datasets and improved my Python skills. However, the workload was often overwhelming.', 3.5, 26);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (2, 'This co-op improved my financial modeling skills. The environment was fast-paced, which could be challenging.', 3.8, 25);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (3, 'I developed technical writing and phlebotomy skills. It was a rewarding experience with reasonable hours.', 4.6, 24);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (8, 'I gained hands-on experience in app development, but the deadlines were unrealistic at times.', 3.4, 22);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (9, 'I improved my graphic design skills, but the feedback process was slow and unclear.', 3.3, 8);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (9, 'Public speaking and teamwork were key components. While rewarding, the co-op felt unstructured at times.', 3.9, 12);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (11, 'Great exposure to laboratory techniques. The work environment, however, could be stressful.', 3.4, 7);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (13, 'I enjoyed working on financial data analysis. The work culture, though, could have been more inclusive.', 3.7, 4);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (14, 'I learned technical writing skills, but the workload was heavier than expected for an intern position.', 3.4, 19);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (15, 'This role was about supply chain analysis. It was intense, but I learned valuable project management skills.', 3.8, 5);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (16, 'This position improved my programming skills. The mentorship provided made up for occasional miscommunication.', 4.1, 2);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (17, 'The co-op focused on creative tasks. However, the lack of collaboration opportunities was disappointing.', 3.5, 6);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (18, 'The role emphasized security testing. The pace was demanding, but the skills I learned were worthwhile.', 3.9, 15);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (20, 'The co-op revolved around financial modeling. Great for students, though the expectations were unclear initially.', 3.9, 9);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (24, 'The co-op involved healthcare customer service. While fulfilling, the environment could be overwhelming.', 3.6, 29);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (26, 'I developed my skills in cybersecurity. The workload was heavy, but it was a good learning experience.', 4.0, 21);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (27, 'This co-op gave me exposure to supply chain processes. However, there was minimal opportunity for creative input.', 3.5, 12);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (28, 'The co-op was great for my career development. However, the work intensity could be too much at times.', 3.6, 8);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (33, 'Working in marketing was fulfilling, but I wish I had more hands-on experience with actual campaigns.', 3.2, 22);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (35, 'Great exposure to laboratory work. The team was supportive but the hours were long.', 4.1, 14);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (1, 'The internship was excellent. I learned a lot about data analysis and Python programming. Would recommend to students with strong analytical skills.', 4.2, 10);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (2, 'I learned a lot about working with data sets, but the hours were longer than expected. Overall, it was a great experience.', 3.7, 20);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (3, 'Great co-op for someone looking to improve laboratory techniques. The team was very supportive, but the job could get repetitive.', 3.8, 5);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (8, 'I worked on multiple software development projects. The work pace was fast and deadlines were tight. Would recommend to students looking to gain coding experience.', 4.1, 22);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (9, 'Great exposure to marketing strategies. It was an excellent experience, but the team lacked coordination and feedback was slow.', 3.6, 17);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (11, 'I enjoyed working on creative tasks and improving my public speaking skills. The environment, however, was sometimes stressful due to conflicting deadlines.', 3.4, 12);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (11, 'Great exposure to laboratory techniques. However, there were long hours and not enough guidance from the team.', 3.2, 18);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (13, 'The role provided me with great data analysis experience. However, I wish the work environment had been a bit less chaotic.', 3.5, 15);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (14, 'The internship was really helpful for learning financial analysis. However, the role could have been less repetitive.', 3.8, 19);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (15, 'I learned a lot in the supply chain analysis field, but the lack of creative freedom in the job was a bit disappointing.', 3.4, 11);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (16, 'This internship provided excellent exposure to programming. The team was very helpful, though the deadlines were tight.', 4.3, 6);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (17, 'I learned a lot about cybersecurity. However, the workload was intense and didn’t always allow for proper work-life balance.', 3.9, 28);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (18, 'Great experience working in security testing. However, the environment was stressful and lacked proper mentorship.', 3.6, 9);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (20, 'This internship involved a lot of data analysis. The team was very collaborative, but the workload was more than expected.', 3.8, 17);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (24, 'The healthcare co-op was a good experience, though I felt like I didn’t get enough exposure to the clinical side.', 3.4, 13);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (26, 'Cybersecurity co-op was very beneficial to my career. However, the learning curve was steep, and the expectations were high.', 4.0, 5);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (27, 'I had a great experience in supply chain analysis. However, the work was very process-driven and lacked creativity.', 3.7, 6);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (28, 'I developed my programming skills, but the intense workload made it hard to manage other responsibilities.', 3.3, 22);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (33, 'I worked on projects related to marketing strategy. It was a great learning experience, but the team was not very communicative.', 3.8, 29);
+
+INSERT INTO review (student_id, review_text, rating, position_id)
+VALUES (35, 'Great exposure to laboratory work. The team was supportive but the hours were long.', 4.2, 16);

@@ -136,6 +136,3 @@ def delete_review(id):
     response = make_response("Review successfully deleted")
     response.status_code = 200
     return response
-
-
-
