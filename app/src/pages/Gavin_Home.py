@@ -20,10 +20,10 @@ if st.button('Access Student Data',
              use_container_width=True):
   st.switch_page('pages/GStudent_Data.py')
   
-if st.button('Reload a backup app into the log',
+if st.button('Manage Databases',
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/GLogs_Backup.py')
+  st.switch_page('pages/GDatabases.py')
 
 if st.button('Hire a new data analyst',
              type='primary',
