@@ -32,7 +32,6 @@ def add_user_skill(id):
     skill_data = request.json
     skill_id = skill_data['skill_id']
 
-    
     query = f'''
         INSERT INTO student_skills (student_id, skill_id)
         VALUES ({id}, {skill_id})
