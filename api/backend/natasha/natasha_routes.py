@@ -4,13 +4,12 @@ from backend.db_connection import db
 natasha = Blueprint('natasha', __name__)
 
 # Gets all reviews for a specific position id (Natasha's 1st story)
-@natasha.route('/review/positions/<position_id>', methods=['GET'])
+@natasha.route('/review/<position_id>', methods=['GET'])
 def find_position_reviews(position_id):
     query = f'''
-        SELECT r.id, r.rating, r.review_text
+        SELECT id, rating, review_text
         FROM review r
-        JOIN coop_position p ON r.position_id = p.id
-        WHERE r.position_id = {position_id}
+        WHERE position_id = {position_id}
     '''
     cursor = db.get_db().cursor()
     cursor.execute(query)

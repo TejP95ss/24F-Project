@@ -13,7 +13,7 @@ if option == "Fetch Student List":
     if st.button("Fetch Student List"):
         try:
             # Make the API request to the Flask route
-            response = requests.get(f"http://web-api:4000/user")
+            response = requests.get(f"http://web-api:4000/student")
             
             if response.status_code == 200:
                 # Parse the JSON response
