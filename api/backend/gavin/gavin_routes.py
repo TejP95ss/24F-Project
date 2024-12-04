@@ -38,20 +38,32 @@ def count_student_users():
     return response
 
 # Adds a backup application into the log
-@gavin.route('/logs_backup/<app_id>', methods=['PUT'])
-def load_backup_app(app_id):
+@gavin.route('/logs_backup/<id>', methods=['PUT'])
+def load_backup_app(id):
+
     query = f'''
-        INSERT INTO logs {app_id}
-        SELECT id 
+        INSERT INTO logs (app_id)
+        SELECT {id}
         FROM applications
-        WHERE version = 'backup';
     '''
 
+    backup_check_query = f"SELECT id FROM applications WHERE id = {id}"
+    cursor = db.get_db().cursor()
+    cursor.execute(backup_check_query)
+    backup_exists = cursor.fetchone()
+    
+    if not backup_exists:
+        current_app.logger.error(f"No backup found with ID: {id}")
+        response = make_response(jsonify({"error": f"No backup found with ID: {id}"}))
+        response.status_code = 404
+        return response
+
+    current_app.logger.info(f'Query: {query}')
     cursor = db.get_db().cursor()
     cursor.execute(query)
-    theData = cursor.fetchall()
+    backup_details = cursor.fetchall()
 
-    response = make_response(jsonify(theData))
+    response = make_response(jsonify(backup_details))
     response.status_code = 200
     return response
 
