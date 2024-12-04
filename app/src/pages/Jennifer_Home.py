@@ -17,14 +17,14 @@ st.write('### What would you like to do today?')
 if st.button('View Trends Overview', 
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/31_Trends_Overview.py')
+    st.switch_page('pages/Jennifer_Trends_Overview.py')
 
 if st.button('Manage Trends', 
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/32_Manage_Trends.py')
+    st.switch_page('pages/Jennifer_Manage_Trends.py')
 
 if st.button('View Reports', 
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/33_View_Reports.py')
+    st.switch_page('pages/Jennifer_View_Reports.py')
