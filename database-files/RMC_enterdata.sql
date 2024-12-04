@@ -590,6 +590,35 @@ INSERT INTO skill (name) VALUES ('Mobile App Development');
 INSERT INTO skill (name) VALUES ('Quality Assurance Testing');
 INSERT INTO skill (name) VALUES ('Digital Marketing');
 INSERT INTO skill (name) VALUES ('Supply Chain Management');
+INSERT INTO skill (name) VALUES ('Business Analysis');
+INSERT INTO skill (name) VALUES ('Data Visualization');
+INSERT INTO skill (name) VALUES ('Financial Analysis');
+INSERT INTO skill (name) VALUES ('Software Development');
+INSERT INTO skill (name) VALUES ('Product Management');
+INSERT INTO skill (name) VALUES ('SEO Optimization');
+INSERT INTO skill (name) VALUES ('Financial Reporting');
+INSERT INTO skill (name) VALUES ('JavaScript');
+INSERT INTO skill (name) VALUES ('Agile Methodology');
+INSERT INTO skill (name) VALUES ('Database Administration');
+INSERT INTO skill (name) VALUES ('Artificial Intelligence');
+INSERT INTO skill (name) VALUES ('UX/UI Design');
+INSERT INTO skill (name) VALUES ('Video Production');
+INSERT INTO skill (name) VALUES ('Cybersecurity Risk Management');
+INSERT INTO skill (name) VALUES ('CRM Software');
+INSERT INTO skill (name) VALUES ('Salesforce');
+INSERT INTO skill (name) VALUES ('SAP Systems');
+INSERT INTO skill (name) VALUES ('Supply Chain Optimization');
+INSERT INTO skill (name) VALUES ('Network Administration');
+INSERT INTO skill (name) VALUES ('Content Strategy');
+INSERT INTO skill (name) VALUES ('Clinical Research');
+INSERT INTO skill (name) VALUES ('Medical Imaging');
+INSERT INTO skill (name) VALUES ('Biomedical Engineering');
+INSERT INTO skill (name) VALUES ('CAD Design');
+INSERT INTO skill (name) VALUES ('Machine Learning for Healthcare');
+INSERT INTO skill (name) VALUES ('Project Lifecycle Management');
+INSERT INTO skill (name) VALUES ('Mechanical Design Engineering');
+INSERT INTO skill (name) VALUES ('Pharmacovigilance');
+
 
 INSERT INTO trends (industry, skill_alignments, career_alignments, satisfaction_alignments, position_id)
 VALUES ('Technology', 'Python Programming, SQL Database Management, Cloud Computing', 'Excellent', 'Extremely Satisfied', 26);
