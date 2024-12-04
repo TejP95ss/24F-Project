@@ -32,21 +32,6 @@ def add_user_skill(id):
     skill_data = request.json
     skill_id = skill_data['skill_id']
 
-    student_and_skill = f"""
-    SELECT 'student' AS type FROM student WHERE id = {id}
-    UNION
-    SELECT 'skill' AS type FROM skill WHERE id = {skill_id};
-    """
-    cursor = db.get_db().cursor()
-    cursor.execute(student_and_skill)
-    exists = cursor.fetchall()
-    
-    types_found = {row['type'] for row in exists}
-    
-    if 'student' not in types_found or 'skill' not in types_found:
-        response = make_response(jsonify({"error": f"Invalid student id or skill id given"}))
-        response.status_code = 404
-        return response
     
     query = f'''
         INSERT INTO student_skills (student_id, skill_id)
@@ -67,17 +52,6 @@ def delete_user_skill(id):
     skill_data = request.json
     skill_id = skill_data['skill_id']
 
-    student_skill_check = f"SELECT student_id FROM student_skills WHERE student_id = {id} AND skill_id = {skill_id}"
-    cursor = db.get_db().cursor()
-    cursor.execute(student_skill_check)
-    exists = cursor.fetchone()
-    
-    if not exists:
-        current_app.logger.error(f"{skill_id} is not associated with student id: {id}")
-        response = make_response(jsonify({"error": f"{skill_id} is not associated with student id: {id}"}))
-        response.status_code = 404
-        return response    
-
     query = f'''
         DELETE FROM student_skills
         WHERE student_id = {id} AND skill_id = {skill_id}
@@ -95,17 +69,6 @@ def delete_user_skill(id):
 @john.route('/user/<id>/linkedin', methods=['PUT'])
 def update_linkedin_url(id):
     data = request.json
-    id_check = f"SELECT id FROM student WHERE id = {id}"
-    cursor = db.get_db().cursor()
-    cursor.execute(id_check)
-    exists = cursor.fetchone()
-    
-    if not exists:
-        current_app.logger.error(f"{id} is not associated with student id: {id}")
-        response = make_response(jsonify({"error": f"{id} is not associated with student id: {id}"}))
-        response.status_code = 404
-        return response   
-    
     linkedin_url = data['linkedin_url']
 
     query = f"UPDATE student SET linkedin = '{linkedin_url}' WHERE id = {id}"
