@@ -108,3 +108,35 @@ def hire_analyst():
     response.status_code = 201
     return response
 
+# Removes the given review from the database
+@gavin.route('/review/<id>/remove', methods=['DELETE'])
+def delete_review(id):
+    review_data = request.json
+
+    check_review = f"SELECT id FROM review WHERE id = {id}"
+    cursor = db.get_db().cursor()
+    cursor.execute(check_review)
+    exists = cursor.fetchone()
+
+    if not exists:
+        current_app.logger.error(f"no review exists with associated id: {id}")
+        response = make_response(jsonify({"error": f"no review exists with associated id: {id}"}))
+        response.status_code = 404
+        return response   
+    
+    query = f'''
+        DELETE FROM review
+        WHERE id = {id}
+    '''
+
+    current_app.logger.info(f'Query: {query}')
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    db.get_db().commit()
+
+    response = make_response("Review successfully deleted")
+    response.status_code = 200
+    return response
+
+
+
