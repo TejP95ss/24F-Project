@@ -4,13 +4,12 @@ from backend.db_connection import db
 natasha = Blueprint('natasha', __name__)
 
 # Gets all reviews for a specific position id (Natasha's 1st story)
-@natasha.route('/review/positions/<position_id>', methods=['GET'])
+@natasha.route('/review/<position_id>', methods=['GET'])
 def find_position_reviews(position_id):
     query = f'''
-        SELECT r.id, r.rating, r.review_text
+        SELECT id, rating, review_text
         FROM review r
-        JOIN coop_position p ON r.position_id = p.id
-        WHERE r.position_id = {position_id}
+        WHERE position_id = {position_id}
     '''
     cursor = db.get_db().cursor()
     cursor.execute(query)
@@ -71,19 +70,19 @@ def add_user():
     response.status_code = 201
     return response
 
-# Route to make a user not open to connect (Natasha's 4th story)
+# Route to edit user's connection preferences (Natasha's 4th story)
 @natasha.route('/student/<id>', methods = ['PUT'])
 def update_connect(id):
-    student_data = request.json
-    connect = student_data_data['openToConnect']
+    input = request.json
+    connect = input['openToConnect']
 
     query = f'''
         UPDATE student
-        SET openToConnect = false
+        SET openToConnect = {connect}
         WHERE id = {id}
         '''
         
-    current_app.logger.into(f'Query: {query}')
+    current_app.logger.info(f'Query: {query}')
     cursor = db.get_db().cursor()
     cursor.execute(query)
     db.get_db().commit()
@@ -119,7 +118,7 @@ def update_review(id):
         UPDATE review
         SET rating = {rating}, review_text = '{comments}'
         WHERE id = {id}
-    '''
+        '''
     current_app.logger.info(f'Query: {query}')
     cursor = db.get_db().cursor()
     cursor.execute(query)

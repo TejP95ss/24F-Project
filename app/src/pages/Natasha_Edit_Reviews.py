@@ -26,9 +26,16 @@ if option == "Update Review":
         else:
             st.warning("Please fill all fields!")
 
+<<<<<<< HEAD
 elif option == "Delete Review":
     st.header("Delete Review")
     id = st.text_input("Review ID:", key="remove_review_id")
+=======
+# Delete Review
+    elif option == "Delete Your Review":
+        st.header("Delete Review")
+        id = st.text_input("Review ID", key="remove_review_id")
+>>>>>>> 12bdd8d2570ed8f94eb34cd0739a5b2e6336a9cb
 
     if st.button("Delete Review"):
         if id:
