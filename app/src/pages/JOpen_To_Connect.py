@@ -14,7 +14,7 @@ if st.button("Fetch Open-to-Connect Students"):
             else:
                 st.success("Students Open to Connect:")
                 for student in students:
-                    st.write(f"- **Name**: {student['name']}")
+                    st.write(f"- **Name**: {student['full_name']}")
                     st.write(f"  **LinkedIn**: {student['linkedin']}")
                     st.write("---")
         elif response.status_code == 404:
