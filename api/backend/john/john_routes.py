@@ -88,7 +88,7 @@ def update_linkedin_url(id):
 @john.route('/students/open_to_connect', methods=['GET'])
 def get_students_open_to_connect():
     query = """
-        SELECT id, full_name, linkedin
+        SELECT id, username, full_name, linkedin
         FROM student
         WHERE openToConnect = 1
     """
