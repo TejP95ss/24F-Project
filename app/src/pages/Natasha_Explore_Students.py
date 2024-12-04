@@ -13,7 +13,7 @@ if option == "Fetch Student List":
     if st.button("Fetch Student List"):
         try:
             # Make the API request to the Flask route
-            response = requests.get(f"http://web-api:4000/user")
+            response = requests.get(f"http://web-api:4000/id")
             
             if response.status_code == 200:
                 # Parse the JSON response
@@ -24,8 +24,8 @@ if option == "Fetch Student List":
                     st.subheader("Student Details")
                     st.write(f"**Username:** {student_details[0]['username']}")
                     st.write(f"**ID:** {student_details[0]['id']}")
-                    st.write(f"**Willing to Connect?:** {student_details[0]['openToConnect']}") # Figure out how to change TF to YN
-                    st.write(f"**LinkedIn:** ${student_details[0]['linkedin']}")
+                    st.write(f"**Willing to Connect?:** {student_details[0]['openToConnect']}") # Figure out how to change 12 to YN
+                    st.write(f"**LinkedIn:** {student_details[0]['linkedin']}")
                     st.write(f"**Major:** {student_details[0]['major']}")
                 else:
                     st.error("An Error Occurred.")
@@ -43,7 +43,7 @@ elif option == "Find Specific Student":
        if id:
             try:
                 # Make the API request to the Flask route
-                response = requests.get(f"http://web-api:4000/user/{id}")
+                response = requests.get(f"http://api:4000/user/{id}")
             
                 if response.status_code == 200:
                     # Parse the JSON response
@@ -54,7 +54,8 @@ elif option == "Find Specific Student":
                         st.subheader("Student Details")
                         st.write(f"**Username:** {student_details[0]['username']}")
                         st.write(f"**ID:** {student_details[0]['id']}")
-                        st.write(f"**Willing to Connect?:** {student_details[0]['openToConnect']}") # Figure out how to change TF to YN
+                        willing_to_connect = "Yes" if student_details[0]['openToConnect'] else "No"
+                        st.write(f"**Willing to Connect?:** {willing_to_connect}")
                         st.write(f"**LinkedIn:** ${student_details[0]['linkedin']}")
                         st.write(f"**Major:** {student_details[0]['major']}")
                     else:

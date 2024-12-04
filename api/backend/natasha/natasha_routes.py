@@ -36,7 +36,7 @@ def find_user(id):
     return response
 
 # Returns a list of co op students (Natasha's 2nd story)
-@natasha.route('/user', methods=['GET'])
+@natasha.route('/id', methods=['GET'])
 def get_users():
     query = f'''
         SELECT id, username, openToConnect, linkedin, major
