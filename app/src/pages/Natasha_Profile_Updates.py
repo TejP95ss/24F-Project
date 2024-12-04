@@ -8,11 +8,11 @@ option = st.radio("What would you like to do?", ["Create Profile", "Change Conne
 if option == "Create Profile":
     st.header("Create Profile")
     username = st.text_input("Username: ")
-    profileType = st. # option to put either Seeker or Reviewer
-    openToConnect = st. # Option to put yes or no
+    profileType = st.radio("Choose an option:", ("Seeker", "Reviewer", "Both")) 
+    openToConnect = st.radio("Choose an option:", (True, False))
 
     if st.button("Create Profile"):
-        if position_id and student_id and review_text:
+        if username and profileType and openToConnect:
             data = {
                 "username": username,
                 "profileType": profileType,
@@ -29,7 +29,7 @@ if option == "Create Profile":
 # Update Profile
 elif option == "Change Connect Preferences":
     st.header("Change Your Connection Preferences")
-    openToConnect = st. # Option to put yes or no
+    openToConnect = st.radio("Choose an option:", (True, False))
 
     if st.button("Update Profile"):
         if openToConnect:

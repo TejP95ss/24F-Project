@@ -24,10 +24,8 @@ def find_position_reviews(position_id):
 @natasha.route('/user/<id>', methods=['GET'])
 def find_user(id):
     query = f'''
-        SELECT s.username, s.openToConnect, s.linkedin, r.review_text, r.rating
-        FROM student s
-        JOIN review r ON s.id = r.student_id
-        WHERE s.id = {id}
+        SELECT id, username, openToConnect, linkedin, major
+        FROM student
     '''
     cursor = db.get_db().cursor()
     cursor.execute(query)
