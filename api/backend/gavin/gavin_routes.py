@@ -44,7 +44,7 @@ def load_backup_app(id):
     query = f'''
         INSERT INTO logs (app_id)
         SELECT {id}
-        FROM applications
+        FROM applications WHERE app_id = {id}
     '''
 
     backup_check_query = f"SELECT id FROM applications WHERE id = {id}"
