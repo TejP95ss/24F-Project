@@ -59,7 +59,7 @@ CREATE TABLE review
 CREATE TABLE skill
 (
     id integer AUTO_INCREMENT PRIMARY KEY,
-    name varchar(25)
+    name varchar(100)
 );
 
 CREATE TABLE review_skills
