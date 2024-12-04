@@ -6,7 +6,6 @@ from modules.nav import SideBarLinks
 
 st.set_page_config(layout = 'wide')
 
-# Show appropriate sidebar links for the role of the currently logged in user
 SideBarLinks()
 
 st.title(f"Welcome {st.session_state['first_name']}.")
@@ -19,12 +18,17 @@ if st.button('Get Information About a Coop',
              use_container_width=True):
   st.switch_page('pages/JCoop_Info.py')
 
-if st.button('Edit Skills', 
+if st.button('Add and Remove Skills', 
              type='primary',
              use_container_width=True):
   st.switch_page('pages/JEdit_Skills.py')
 
-if st.button('Edit Reviews', 
+if st.button('Edit Profile', 
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/JEdit_Reviews.py')
+  st.switch_page('pages/JUpdate_Linkedin.py')
+
+if st.button('See All Students Open To Connect', 
+             type='primary',
+             use_container_width=True):
+  st.switch_page('pages/JOpen_To_Connect.py')
