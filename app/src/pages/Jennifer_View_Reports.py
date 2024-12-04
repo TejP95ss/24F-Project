@@ -3,7 +3,7 @@ import requests
 
 st.title("View Reports")
 
-if st.button("Fetch Reports Created by Co-Op Students"):
+if st.button("Fetch Reports Created by Co-Op Advisors"):
     try:
         url = "http://web-api:4000/reports"
         response = requests.get(url)
