@@ -29,7 +29,7 @@ if option == "Update Review":
 # Delete Review
     elif option == "Delete Your Review":
         st.header("Delete Review")
-        id = st.text_input("Review ID:", key="remove_review_id")
+        id = st.text_input("Review ID", key="remove_review_id")
 
         if st.button("Delete Review"):
             if id:

@@ -83,7 +83,7 @@ def update_connect(id):
         WHERE id = {id}
         '''
         
-    current_app.logger.into(f'Query: {query}')
+    current_app.logger.info(f'Query: {query}')
     cursor = db.get_db().cursor()
     cursor.execute(query)
     db.get_db().commit()
@@ -119,7 +119,7 @@ def update_review(id):
         SET review_text = {text}
         WHERE id = {id}
         '''
-    current_app.logger.into(f'Query: {query}')
+    current_app.logger.info(f'Query: {query}')
     cursor = db.get_db().cursor()
     cursor.execute(query)
     db.get_db().commit()
