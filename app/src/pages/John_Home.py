@@ -16,19 +16,19 @@ st.write('### What would you like to do today?')
 if st.button('Get Information About a Coop', 
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/JCoop_Info.py')
+  st.switch_page('pages/John_Coop_Info.py')
 
 if st.button('Add and Remove Skills', 
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/JEdit_Skills.py')
+  st.switch_page('pages/John_Edit_Skills.py')
 
 if st.button('Edit Profile', 
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/JUpdate_Linkedin.py')
+  st.switch_page('pages/John_Update_Linkedin.py')
 
 if st.button('See All Students Open To Connect', 
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/JOpen_To_Connect.py')
+  st.switch_page('pages/John_Open_To_Connect.py')
