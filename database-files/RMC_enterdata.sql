@@ -21,8 +21,8 @@ VALUES ('patel.r', 'Rohan Patel', 'Current Seeker', 'Data Science', 'Khoury');
 INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('williams.o2026', 'Owen Williams', 'Current Seeker', 'English', 'CAMD');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
-VALUES ('nguyen.liam', 'Liam Nguyen', 'Past Co-Op', 'Biomedical Engineering', 'COE', 'www.linkedin.com/in/nguyen-liam/');
+INSERT INTO student (username, full_name, profileType, openToConnect, major, home_college, linkedin)
+VALUES ('nguyen.liam', 'Liam Nguyen', 'Past Co-Op', False, 'Biomedical Engineering', 'COE', 'www.linkedin.com/in/nguyen-liam/');
 
 INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('baker.z23', 'Zachary Baker', 'Past Co-Op', 'Business', 'D''Amore-McKim', 'www.linkedin.com/in/baker-z/');
@@ -45,8 +45,8 @@ VALUES ('brown.caleb', 'Caleb Brown', 'Past Co-Op', 'Neuroscience', 'COS', 'www.
 INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('taylor.j24', 'Julia Taylor', 'Past Co-Op', 'Psychology', 'Bouve', 'www.linkedin.com/in/taylor-j/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
-VALUES ('clark.m2023', 'Michael Clark', 'Past Co-Op', 'Philosophy', 'COSSH', 'www.linkedin.com/in/clark-m/');
+INSERT INTO student (username, full_name, profileType, openToConnect, major, home_college, linkedin)
+VALUES ('clark.m2023', 'Michael Clark', 'Past Co-Op', False, 'Philosophy',  'COSSH', 'www.linkedin.com/in/clark-m/');
 
 INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('moore.ben', 'Benjamin Moore', 'Past Co-Op', 'Media Arts', 'CAMD', 'www.linkedin.com/in/moore-ben/');
@@ -57,8 +57,8 @@ VALUES ('cooper.h', 'Hannah Cooper', 'Past Co-Op', 'Biomedical Engineering', 'CO
 INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('white.d2026', 'David White', 'Current Seeker', 'Business', 'D''Amore-McKim');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
-VALUES ('davis.lily', 'Lily Davis', 'Past Co-Op', 'Data Science', 'Khoury', 'www.linkedin.com/in/davis-lily/');
+INSERT INTO student (username, full_name, profileType, openToConnect, major, home_college, linkedin)
+VALUES ('davis.lily', 'Lily Davis', 'Past Co-Op', False, 'Data Science',  'Khoury', 'www.linkedin.com/in/davis-lily/');
 
 INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('miller.j', 'James Miller', 'Current Seeker', 'Data Science', 'Khoury');
@@ -81,8 +81,8 @@ VALUES ('king.emma', 'Emma King', 'Past Co-Op', 'Journalism', 'CAMD', 'www.linke
 INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
 VALUES ('adams.ryan', 'Ryan Adams', 'Past Co-Op', 'Cybersecurity', 'Khoury', 'www.linkedin.com/in/adams-ryan/');
 
-INSERT INTO student (username, full_name, profileType, major, home_college, linkedin)
-VALUES ('carter.o', 'Olivia Carter', 'Past Co-Op', 'Neuroscience', 'COS', 'www.linkedin.com/in/carter-o/');
+INSERT INTO student (username, full_name, profileType, openToConnect, major, home_college, linkedin)
+VALUES ('carter.o', 'Olivia Carter', 'Past Co-Op', False, 'Neuroscience', 'COS', 'www.linkedin.com/in/carter-o/');
 
 INSERT INTO student (username, full_name, profileType, major, home_college)
 VALUES ('turner.e2026', 'Ethan Turner', 'Current Seeker', 'Chemical Engineering', 'COE');
