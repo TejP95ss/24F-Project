@@ -1,4 +1,15 @@
 # **Rate My Coop**
+Team Member Names: Aarushi Thejaswi, Arushee Tirunagari, Niharika Banerjee, Alexander Kylander-Kreiner, Tej Patel
+
+Project Demo Video Link:
+
+--
+
+Instructions for starting the docker container:
+docker compose down
+docker compose up -d
+
+--
 
 **Rate My Coop** is a web application inspired by **Rate My Professor**, designed to help co-op students share experiences, find relevant co-op opportunities, and connect with peers. This platform provides a space for students to discover detailed information about co-op positions, rate their experiences, and build meaningful professional connections.
 

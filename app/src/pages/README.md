@@ -1,7 +1,19 @@
 # `pages` Folder
 
-This folder contains all the pages that will be part of the application. Details on required numbers will be provided in the Phase 3 documentation.
+This folder contains all the pages that will be part of the application. 
 
-These pages are meant to show you an example of some of the features of Streamlit and the way we will limit functionality access by role/persona. It is not meant to represent a complete application.
+--
+**Gavin**
 
-TODO: Describe the pages folder and include link to documentation. Don't forget about ordering of pages.
+
+**John**
+
+
+**Jennifer**
+
+
+**Natasha**
+Natasha_Home is this user's landing page
+Natasha_Edit Reviews allows the user to update or delete one of their own existing reviews
+Natasha_Explore_Students allows the user to look through the student database or search for a specific student
+Natasha_View_Reviews allows the user to view all reviews for a specific co-op
