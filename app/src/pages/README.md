@@ -3,7 +3,7 @@
 This folder contains all the pages that will be part of the application. 
 
 --
-**Gavin**
+## **Gavin**
 
 
 ## **John**
@@ -45,10 +45,10 @@ Find students who are open to networking.
 - View names and LinkedIn links of open-to-connect students.
 
 
-**Jennifer**
+## **Jennifer**
 
 
-**Natasha**
+## **Natasha**
 Natasha_Home is this user's landing page
 Natasha_Edit Reviews allows the user to update or delete one of their own existing reviews
 Natasha_Explore_Students allows the user to look through the student database or search for a specific student
