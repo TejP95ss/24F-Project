@@ -5,6 +5,36 @@ This folder contains all the pages that will be part of the application.
 --
 ## **Gavin**
 
+These pages are designed to help Gavin, a system administrator, manage user data, monitor activity, and add staff.
+
+### **1. Gavin_Analyst_Management
+Process and manage data for system analysts.
+
+#### **Features**:
+- Allows the addition of a new hire, with user input for name, email, and position.
+- Allows the modification of employee emails given an email and ID
+
+---
+
+### **2. Gavin_Databases
+Manage reviews submitted into the system.
+
+#### **Features**:
+- Allows the removal of reviews in the system.
+- Input a review ID to remove it.
+
+---
+
+### **3. Gavin_Student_Data
+View information about student users in the system.
+
+#### **Features**:
+- Displays data about 
+    - Active student user IDs
+    - Students ready to connect
+    - Co-op counts for students on the platform
+
+---
 
 ## **John**
 
