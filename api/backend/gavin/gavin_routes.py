@@ -37,34 +37,29 @@ def count_student_users():
     response.status_code = 200
     return response
 
-# Adds a backup application into the log
-@gavin.route('/logs_backup/<id>', methods=['PUT'])
+# Update contact info for the data analyst
+@gavin.route('/analyst/edit/<id>', methods=['PUT'])
 def load_backup_app(id):
 
+    email = request.json
+    analyst_email = email['email']
+
     query = f'''
-        INSERT INTO logs (app_id)
-        SELECT {id}
-        FROM applications
+        UPDATE data_analyst 
+        SET email = '{analyst_email}'
+        WHERE id = {id}
     '''
 
-    backup_check_query = f"SELECT id FROM applications WHERE id = {id}"
     cursor = db.get_db().cursor()
-    cursor.execute(backup_check_query)
-    backup_exists = cursor.fetchone()
-    
-    if not backup_exists:
-        current_app.logger.error(f"No backup found with ID: {id}")
-        response = make_response(jsonify({"error": f"No backup found with ID: {id}"}))
-        response.status_code = 404
-        return response
+    try:
+        cursor.execute(query)
+        db.get_db().commit()
 
-    current_app.logger.info(f'Query: {query}')
-    cursor = db.get_db().cursor()
-    cursor.execute(query)
-    backup_details = cursor.fetchall()
-
-    response = make_response(jsonify(backup_details))
-    response.status_code = 200
+        response = make_response("Analyst email updated successfully")
+        response.status_code = 200
+    except Exception as e:
+        current_app.logger.error(f"Error updating analyst email: {str(e)}")
+        response = make_response(jsonify({"error": "Failed to update analyst email"}), 500)
     return response
 
 

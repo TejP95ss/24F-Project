@@ -28,4 +28,4 @@ if st.button('Manage Databases',
 if st.button('Hire a new data analyst',
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/GHire_Analyst.py')
+    st.switch_page('pages/GAnalyst_Management.py')
