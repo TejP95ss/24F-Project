@@ -18,14 +18,14 @@ st.write('### What would you like to do today?')
 if st.button('Access Student Data', 
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/GStudent_Data.py')
+  st.switch_page('pages/Gavin_Student_Data.py')
   
 if st.button('Manage Databases',
              type='primary',
              use_container_width=True):
-  st.switch_page('pages/GDatabases.py')
+  st.switch_page('pages/Gavin_Databases.py')
 
 if st.button('Hire a new data analyst',
              type='primary',
              use_container_width=True):
-    st.switch_page('pages/GAnalyst_Management.py')
+    st.switch_page('pages/Gavin_Analyst_Management.py')
