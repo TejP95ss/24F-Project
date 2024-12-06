@@ -1,7 +1,7 @@
 # **Rate My Coop**
 Team Member Names: Aarushi Thejaswi, Arushee Tirunagari, Niharika Banerjee, Alexander Kylander-Kreiner, Tej Patel
 
-Project Demo Video Link:
+Project Demo Video Link: https://www.dropbox.com/scl/fi/prls1bto8tzhjnb5x40sg/RateMyCoop_DB_Project.mp4?rlkey=e20ooe3txsqxcxr7ue1as9te3&st=29e1835d&dl=0 
 
 --
 

@@ -31,7 +31,7 @@ elif option == "Change Connect Preferences":
     st.header("Change Your Connection Preferences")
 
     st_id = st.text_input("Student ID: ")
-    connectButton = st.radio("Choose an option:", (True, False))
+    connectButton = st.radio("You are open to connect:", (True, False))
 
     if st.button("Update Profile"):
         if st_id and connectButton is not None:

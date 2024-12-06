@@ -121,7 +121,50 @@ Access reports created by co-op advisors for program evaluation.
 ---
 
 ## **Natasha**
-Natasha_Home is this user's landing page
-Natasha_Edit Reviews allows the user to update or delete one of their own existing reviews
-Natasha_Explore_Students allows the user to look through the student database or search for a specific student
-Natasha_View_Reviews allows the user to view all reviews for a specific co-op
+
+These pages are designed to help Natasha, a past co-op student, create and update her profile, edit her reviews, explore the student database, and view co-op reviews.
+
+---
+### **1. Natasha_Profile_Updates**
+Create user profile and update connect preferences.
+
+#### **Features**:
+- Create Profile with inputs:
+    - username
+    - profile type
+    - connection preference.
+- Update "open to connect" as true or false.
+
+---
+
+### **2. Natasha_Edit_Reviews**
+Update review ratings or text, or delete a review entirely.
+
+#### **Features**:
+- Update Review:
+  - Input review id, new rating, and updated review text.
+  - Click "Update Review" to save. 
+- Delete Review:
+  - Input review ID and click "Delete Review" to remove it.
+
+---
+
+### **3. Natasha_Explore_Students**
+Allows the user to look through the student database or search for a specific student.
+
+#### **Features**:
+- Fetch list of all students in the database.
+- Fetch information about a certain student based on student ID.
+
+---
+
+### **4. Natasha_View_Reviews**
+View all reviews for a specific co-op.
+
+#### **Features**:
+- Enter co-op position ID. Returns a list of all reviews for that co-op, including:
+    - Review ID
+    - Rating
+    - Review text
+
+---
