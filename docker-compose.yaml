@@ -24,6 +24,6 @@ services:
     volumes:
       - ./database-files:/docker-entrypoint-initdb.d/:ro
     ports:
-      - 3200:3307
+      - 3200:3306
 
 
