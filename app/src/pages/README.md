@@ -77,6 +77,48 @@ Find students who are open to networking.
 
 ## **Jennifer**
 
+These pages are designed to help Jennifer, a co-op program analyst, gather co-op trend information, manage trends, and view reports made by other co-op advisors.
+
+---
+### **1. Jennifer_Trends_Overview**
+View aggregated trends for deeper insights into program alignment.
+
+#### **Features**:
+- Fetch aggregated trends by industry.
+- Display details, including:
+  - Skill alignments.
+  - Career alignments.
+  - Satisfaction alignments.
+
+---
+
+### **2. Jennifer_Manage_Trends**
+Manage co-op program trends by adding, updating, or deleting entries.
+
+#### **Features**:
+- Add a New Trend:
+  -  Input industry, skill alignments, career alignments, and satisfaction alignments.
+  - Click "Add Trend" to save. 
+- Update an Existing Trend:
+  - Enter the trend ID, updated skill alignments, and career alignments.
+  - Click "Update Trend" to apply changes.
+- Delete a Trend:
+  - Input the trend ID and click "Delete Trend" to remove it.
+
+---
+
+### **3. Jennifer_View_Reports**
+Access reports created by co-op advisors for program evaluation.
+
+#### **Features**:
+- Fetch reports by co-op advisors.
+- View details for each report:
+  - Report name.
+  - Industry comparison.
+  - Created by.
+  - Timestamp.
+
+---
 
 ## **Natasha**
 Natasha_Home is this user's landing page
