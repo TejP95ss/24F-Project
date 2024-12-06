@@ -44,11 +44,13 @@ mysql -u [your_username] -p
 2. Run Database Setup Script
 Open the SQL script and execute it in your MySQL client. This will:
 
-3. Drop existing RMCDatabase if it exists
-Create a new RMCDatabase
-Create all necessary tables with appropriate relationships
+- Drop existing RMCDatabase if it exists
+- Create a new RMCDatabase
+- Create all necessary tables with appropriate relationships
 
 
 4. Verify Installation
+
 USE RMCDatabase;
+
 SHOW TABLES;  -- Confirm all tables are created
