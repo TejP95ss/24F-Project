@@ -14,6 +14,7 @@ The database is designed to support comprehensive co-op experience tracking with
 - Skills
 - Administrators
 - Data Analysts
+- System administrator logs/reports
 
 ### **Relational Model Overview**
 The database is built using a MySQL relational model with carefully designed tables and relationships to support complex querying and data integrity.
